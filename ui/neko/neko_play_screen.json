@@ -204,7 +204,7 @@
 
 "create_new_world_button@play_ui.custom_button": {
   "$glyph_texture": "textures/neko/main_icon/worldsIcon",
-  "$desc_button_text": "Jelajahi dunia baru !",
+  "$desc_button_text": "neko.createworld.desc",
   "variables": [
     {
       "requires": "($local_world_upload)",
@@ -224,7 +224,7 @@
 
 "import_world_button@play_ui.custom_button": {
   "$glyph_texture": "textures/neko/main_icon/import_world",
-  "$desc_button_text": "Import dunia dari Eksternal Storage",
+  "$desc_button_text": "neko.createworld.desc",
   "$button_text": "Import world",
   "variables": [
     {
@@ -245,7 +245,7 @@
   "size": [ "100% - 5px" , "100%" ],
   "$glyph_texture": "textures/neko/main_icon/add_server",
   "$button_text": "Add Server",
-  "$desc_button_text": "Tambah kustom server",
+  "$desc_button_text": "neko.addservers.desc",
 
   //Warna
   

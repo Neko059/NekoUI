@@ -1,5 +1,5 @@
 ﻿## Note : 
-## Bahasa :
+## Bahasa : Dansk
 
 # SETTINGS
 neko.graphics=Grafik
@@ -10,3 +10,10 @@ neko.title_gameplay=Indstillinger for spil
 
 neko.about=Om
 neko.title_about=Om
+
+# PLAY SCREEN
+neko.createworld.desc = Skab en ny verden
+neko.importworld.desc = verdens import
+neko.addserver.desc = tilføje server
+
+neko.button.importworld = verdens import

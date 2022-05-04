@@ -1,5 +1,5 @@
 ﻿## Note : 
-## Bahasa :
+## Bahasa : Bulgaria
 
 # SETTINGS
 neko.graphics=Графика
@@ -10,3 +10,10 @@ neko.title_gameplay=Настройки на играта
 
 neko.about=относно
 neko.title_about=относно
+
+# PLAY SCREEN
+neko.createworld.desc = Създайте нов свят
+neko.importworld.desc = световен внос
+neko.addserver.desc = добавяне на сървър
+
+neko.button.importbutton = световен внос

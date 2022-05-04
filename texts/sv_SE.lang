@@ -1,5 +1,5 @@
 ﻿## Note : 
-## Bahasa :
+## Bahasa : Swedia
 
 # SETTINGS
 neko.graphics=Grafik
@@ -10,3 +10,10 @@ neko.title_gameplay=Spelinställning
 
 neko.about=Handla om
 neko.title_about=Handla om
+
+# PLAY SCREEN
+neko.createworld.desc = Skapa en ny värld
+neko.importworld.desc = Världsimport
+neko.addserver.desc = Lägg till server
+
+neko.button.importbutton = Världsimport

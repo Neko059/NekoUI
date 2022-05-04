@@ -1,5 +1,5 @@
 ﻿## Note : 
-## Bahasa :
+## Bahasa : Norwegia
 
 # SETTINGS
 neko.graphics=Grafikk
@@ -10,3 +10,10 @@ neko.title_gameplay=Spillinnstillinger
 
 neko.about=Om
 neko.title_about=Om
+
+# PLAY SCREEN
+neko.createworld.desc = Skap en ny verden
+neko.importworld.desc = Verdensimport
+neko.addserver.desc = Legg til server
+
+neko.button.importbutton = Verdensimport

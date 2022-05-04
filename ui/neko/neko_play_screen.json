@@ -224,7 +224,7 @@
 
 "import_world_button@play_ui.custom_button": {
   "$glyph_texture": "textures/neko/main_icon/import_world",
-  "$desc_button_text": "Import dunia dari Internal Storage",
+  "$desc_button_text": "Import dunia dari Eksternal Storage",
   "$button_text": "Import world",
   "variables": [
     {

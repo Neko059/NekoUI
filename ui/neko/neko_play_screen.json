@@ -245,7 +245,7 @@
   "size": [ "100% - 5px" , "100%" ],
   "$glyph_texture": "textures/neko/main_icon/add_server",
   "$button_text": "Add Server",
-  "$desc_button_text": "Tambah custom server ",
+  "$desc_button_text": "Tambah kustom server",
 
   //Warna
   

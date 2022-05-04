@@ -79,9 +79,9 @@
     "$button_type_panel": "x_button_panel.main_screen_button",
     "$border_visible": false,
     "$default_text_color|default": [ 0.0, 0.0, 0.0 ],
-    "$hover_text_color|default": [ 1.00, 0.42, 0.67 ],
+    "$hover_text_color|default": [ 0.26, 0.27, 0.28 ],
     "$pressed_text_color|default": [ 1.00, 0.00, 0.43 ],
-    "$locked_text_color|default": [ 0.0, 0.0, 0.0 ]
+    "$locked_text_color|default": [ 1.00, 0.11, 0.11 ]
   },  
   
  "store_button@x_button.fxbutton2": {

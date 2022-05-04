@@ -225,7 +225,7 @@
 "import_world_button@play_ui.custom_button": {
   "$glyph_texture": "textures/neko/main_icon/import_world",
   "$desc_button_text": "neko.createworld.desc",
-  "$button_text": "Import world",
+  "$button_text": "neko.button.importbutton",
   "variables": [
     {
       "requires": "($local_world_upload)",

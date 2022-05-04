@@ -15,3 +15,4 @@ neko.title_about=Tentang ResourcePack
 neko.createworld.desc = Jelajahi dunia baru!
 neko.importworld.desc = Import dunia dari Eksternal Storage
 neko.addservers.desc = Tambah kustom server
+neko.button.importbutton = Import Dunia

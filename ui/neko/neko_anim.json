@@ -1,0 +1,219 @@
+{
+  "namespace": "anim_test",
+  
+  //Wipe Animations
+
+"screen_exit_animation_push_offset": {
+  "anim_type": "offset",
+  "easing": "out_cubic",
+  "duration": "$transition_time_push",
+  "from": [ 0, 0 ],
+  "to": [ "-25%", 0 ],
+  "play_event": "screen.exit_push",
+  "end_event": "screen.exit_end"
+},
+
+"screen_exit_animation_pop_offset": {
+  "anim_type": "offset",
+  "easing": "out_cubic",
+  "duration": "$transition_time_pop",
+  "from": [ 0, 0 ],
+  "to": [ "25%", 0 ],
+  "play_event": "screen.exit_pop",
+  "end_event": "screen.exit_end"
+},
+
+"screen_entrance_animation_push_offset": {
+  "anim_type": "offset",
+  "easing": "out_cubic",
+  "duration": "$transition_time_push",
+  "from": [ "25%", 0 ],
+  "to": [ 0, 0 ],
+  "play_event": "screen.entrance_push",
+  "end_event": "screen.entrance_end"
+},
+
+"screen_entrance_animation_pop_offset": {
+  "anim_type": "offset",
+  "easing": "out_cubic",
+  "duration": "$transition_time_pop",
+  "from": [ "-25%", 0 ],
+  "to": [ 0, 0 ],
+  "play_event": "screen.entrance_pop",
+  "end_event": "screen.entrance_end"
+},
+
+//Wipe Animations 2
+
+"screen_exit_animation_push_offset_2": {
+  "anim_type": "offset",
+  "easing": "out_cubic",
+  "duration": "$transition_time_push",
+  "from": [ -10, 0 ],
+  "to": [ "25%", 0 ],
+  "play_event": "screen.exit_push",
+  "end_event": "screen.exit_end"
+},
+
+"screen_exit_animation_pop_offset_2": {
+  "anim_type": "offset",
+  "easing": "out_cubic",
+  "duration": "$transition_time_pop",
+  "from": [ 0, 0 ],
+  "to": [ "-25%", 0 ],
+  "play_event": "screen.exit_pop",
+  "end_event": "screen.exit_end"
+},
+
+"screen_entrance_animation_push_offset_2": {
+  "anim_type": "offset",
+  "easing": "out_cubic",
+  "duration": "$transition_time_push",
+  "from": [ "-25%", 0 ],
+  "to": [ 0, 0 ],
+  "play_event": "screen.entrance_push",
+  "end_event": "screen.entrance_end"
+},
+
+"screen_entrance_animation_pop_offset_2": {
+  "anim_type": "offset",
+  "easing": "out_cubic",
+  "duration": "$transition_time_pop",
+  "from": [ "25%", 0 ],
+  "to": [ 0, 0 ],
+  "play_event": "screen.entrance_pop",
+  "end_event": "screen.entrance_end"
+},
+
+//Wipe Animations 3
+
+"screen_exit_animation_push_offset_3": {
+  "anim_type": "offset",
+  "easing": "out_cubic",
+  "duration": "$transition_time_push",
+  "from": [ 0, 0 ],
+  "to": [ 0, "5%" ],
+  "play_event": "screen.exit_push",
+  "end_event": "screen.exit_end"
+},
+
+"screen_exit_animation_pop_offset_3": {
+  "anim_type": "offset",
+  "easing": "out_cubic",
+  "duration": "$transition_time_pop",
+  "from": [ 0, 0 ],
+  "to": [ 0, "-5%" ],
+  "play_event": "screen.exit_pop",
+  "end_event": "screen.exit_end"
+},
+
+"screen_entrance_animation_push_offset_3": {
+  "anim_type": "offset",
+  "easing": "out_cubic",
+  "duration": "$transition_time_push",
+  "from": [ 0, 0 ],
+  "to": [ 0, "5%" ],
+  "play_event": "screen.entrance_push",
+  "end_event": "screen.entrance_end"
+},
+
+"screen_entrance_animation_pop_offset_3": {
+  "anim_type": "offset",
+  "easing": "out_cubic",
+  "duration": "$transition_time_pop",
+  "from": [ 0, 0 ],
+  "to": [ 0, "-5%" ],
+  "play_event": "screen.entrance_pop",
+  "end_event": "screen.entrance_end"
+},
+
+// SETTINGS
+
+"label_alpha_01": {
+  "anim_type": "alpha",
+  "easing": "linear",
+  "duration": 2,
+  "from": 1.0,
+  "to": 0.5,
+  "activated": true,
+  "resettable": true,
+  "next": "@anim_test.label_alpha_02"
+},
+
+"label_alpha_02": {
+  "anim_type": "alpha",
+  "easing": "linear",
+  "duration": 2,
+  "from": 0.5,
+  "to": 1,
+  "activated": true,
+  "resettable": true,
+  "next": "@anim_test.label_alpha_01"
+},
+
+ // Play Screen
+
+  "alpha_bg": {
+    "anim_type": "alpha",
+    "duration": 3,
+    "from": 1,
+    "to": 0,
+    "activated": true,
+    "resettable": true,
+    "next": "@anim_test.alpha_bg_2"
+  },
+
+  "alpha_bg_2": {
+    "anim_type": "alpha",
+    "duration": 3,
+    "from": 0,
+    "to": 1,
+    "activated": true,
+    "resettable": true,
+    "next": "@anim_test.alpha_bg"
+  },
+
+  // Main UI
+
+  "alpha_bg_3": {
+    "anim_type": "alpha",
+    "duration": 0.5,
+    "from": 1,
+    "to": 0,
+    "activated": true,
+    "resettable": true,
+    "next": "@anim_test.alpha_bg_4"
+  },
+
+  "alpha_bg_4": {
+    "anim_type": "alpha",
+    "duration": 1.5,
+    "from": 0,
+    "to": 1,
+    "activated": true,
+    "resettable": true,
+    "next": "@anim_test.alpha_bg_3"
+  },
+
+  "play_alpha_01": {
+    "anim_type": "alpha",
+    "easing": "linear",
+    "duration": 1.0,
+    "from": 1.0,
+    "to": 0.5,
+    "activated": false,
+    "resettable": true,
+    "next": "@anim_test.play_alpha_02"
+  },
+  
+  "play_alpha_02": {
+    "anim_type": "alpha",
+    "easing": "linear",
+    "duration": 0.5,
+    "from": 0.5,
+    "to": 1,
+    "activated": false,
+    "resettable": true,
+    "next": "@anim_test.play_alpha_01"
+  }
+}

@@ -1,0 +1,493 @@
+/********************************************************
++*   (c) Mojang. All rights reserved                       *
++*   (c) Microsoft. All rights reserved.                   *
++*********************************************************/
+{
+  "namespace": "profile",
+
+  "persona_appearance_preset_panel": {
+    "type": "panel",
+    "offset": [ 0, -10 ], // default y : -22
+    "$preset_appearance_layer|default": 5,
+
+    "$is_preset_appearance_using_gestures|default": false,
+    "controls": [
+      {
+        "skin_model": {
+          "type": "custom",
+          "renderer": "paper_doll_renderer",
+          "camera_tilt_degrees": 0, // default --10
+          "starting_rotation": 0, // default 30
+          "size": [ "100%", "100%" ],
+
+          "layer": "$preset_appearance_layer",
+
+          "$preset_appearance_alpha|default": 0.2,
+          "alpha": "$preset_appearance_alpha",
+
+          "use_selected_skin": false,
+          "use_skin_gui_scale": true,
+          "animation_reset_name": "screen_animation_reset",
+          "anims": [
+            "@common.screen_exit_size_animation_push",
+            "@common.screen_exit_size_animation_pop",
+            "@common.screen_entrance_size_animation_push",
+            "@common.screen_entrance_size_animation_pop"
+          ],
+
+          "$preset_appearance_property_bag|default": {},
+          "property_bag": "$preset_appearance_property_bag",
+
+          "$preset_model_gesture_rotation|default": "",
+          "$preset_model_gesture_bindings|default": [
+            {
+              "binding_type": "global",
+              "binding_name": "$preset_appearance_binding_name",
+              "binding_condition": "always"
+            },
+            {
+              "binding_name": "#is_preset_visible",
+              "binding_name_override": "#visible",
+              "binding_condition": "always"
+            }
+          ],
+          "variables": [
+            {
+              "requires": "$is_preset_appearance_using_gestures",
+              "$preset_model_gesture_rotation": "gesture_x",
+              "$preset_model_gesture_bindings": [
+                {
+                  "binding_type": "global",
+                  "binding_name": "$preset_appearance_binding_name",
+                  "binding_condition": "always"
+                },
+                {
+                  "binding_type": "view",
+                  "source_control_name": "$preset_gesture_source_control_name",
+                  "source_property_name": "#gesture_delta_source",
+                  "target_property_name": "#gesture_delta_source"
+                },
+                {
+                  "binding_type": "view",
+                  "source_control_name": "$preset_gesture_source_control_name",
+                  "source_property_name": "#gesture_mouse_delta_x",
+                  "target_property_name": "#gesture_mouse_delta_x"
+                },
+                {
+                  "binding_name": "#is_preset_visible",
+                  "binding_name_override": "#visible",
+                  "binding_condition": "always"
+                }
+              ]
+            }
+          ],
+
+          "rotation": "$preset_model_gesture_rotation",
+          "bindings": "$preset_model_gesture_bindings"
+        }
+      },
+      {
+        "select_button_input": {
+          "type": "input_panel",
+          "size": "$preset_image_size",
+          "offset": [ 0, "22%" ],
+          "layer": "$preset_appearance_layer",
+          "$preset_appearance_property_bag|default": {},
+          "property_bag": "$preset_appearance_property_bag",
+          "$select_preset_to_button_id|default": "button.select_appearance",
+          "controls": [
+            {
+              "create_new_preset_image": {
+                "$preset_image|default,": "textures/misc/missing_texture",
+                "$preset_image_size|default": [ 20, 20 ],
+                "type": "image",
+                "texture": "$preset_image",
+                "property_bag": "$preset_appearance_property_bag",
+                "bindings": [
+                  {
+                    "binding_name": "#is_preset_add_visible",
+                    "binding_name_override": "#visible",
+                    "binding_condition": "always"
+                  }
+                ]
+              }
+            }
+          ],
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "$select_preset_to_button_id",
+              "mapping_type": "pressed"
+            },
+            {
+              "from_button_id": "button.menu_ok",
+              "to_button_id": "$select_preset_to_button_id",
+              "mapping_type": "focused"
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#enable_edit_appearance",
+              "binding_name_override": "#enabled",
+              "binding_condition": "always"
+            }
+          ]
+        }
+      },
+      {
+        "retry_button@profile.retry_appearance_button": {
+          "offset": [ 0, "14%" ],
+          "visible": false,
+          "$preset_appearance_property_bag|default": {},
+          "property_bag": "$preset_appearance_property_bag",
+          "bindings": [
+            {
+              "binding_name": "#is_retry_visible",
+              "binding_name_override": "#visible",
+              "binding_condition": "always"
+            }
+          ]
+        }
+      },
+      {
+        "appearance_loading_panel@common_store.progress_loading": {
+          "offset": [ 0, "14%" ],
+          "$hide_failure_text": true,
+          "$hide_progress_loading_outline": true,
+          "$preset_appearance_property_bag|default": {},
+          "property_bag": "$preset_appearance_property_bag",
+          "bindings": [
+            {
+              "binding_name": "#is_preset_loading_visible",
+              "binding_name_override": "#visible",
+              "binding_condition": "always"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  // --------------------------------------------------------------------------------------
+  // persona preset section controls
+  // --------------------------------------------------------------------------------------
+  "preset_arrow_button_panel": {
+    "type": "panel",
+    "size": [ 24, "100%" ],
+    "$arrow_button_focus_id|default": "",
+    "$arrow_button_focus_override_left|default": "",
+    "$arrow_button_focus_override_right|default": "",
+    "controls": [
+      {
+        "preset_arrow_button@common_buttons.light_content_button": {
+          "$default_button_texture|default": "textures/neko/borderless/button_borderless_light",
+          "$hover_button_texture|default": "textures/neko/borderless/button_borderless_lighthover",
+          "$pressed_button_texture|default": "textures/neko/borderless/button_borderless_lightpressed",
+          "$locked_button_texture|default": "textures/ui/disabledButtonNoBorder",
+          "$focus_id": "$arrow_button_focus_id",
+          "$focus_override_left": "$arrow_button_focus_override_left",
+          "$focus_override_right": "$arrow_button_focus_override_right",
+          "size": [ "100%", "100%x" ],
+          "$button_content": "profile.profile_button_image_content",
+          "$texture_color": [ 1.0, 1.0, 1.0 ],
+          "$button_image_content_size": [ 10, 11 ],
+          "$profile_button_image|default": "textures/neko/chevron/chevron_left",
+          "$pressed_button_name|default": "button.pressedArrowLeft",
+          "$enabled_binding_Name|default": "#arrow_left_enabled",
+          "$is_arrow_right|default": false,
+          "variables": [
+            {
+              "requires": "$is_arrow_right",
+              "$pressed_button_name": "button.pressedArrowRight",
+              "$profile_button_image": "textures/neko/chevron/chevron_right",
+              "$enabled_binding_Name": "#arrow_right_enabled"
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "$enabled_binding_Name",
+              "binding_name_override": "#enabled",
+              "binding_condition": "always"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "han_button_panel": {
+    "type": "panel",
+    "$glyph_offset|default": [ 0, -5 ],
+    "$glyph_anchor_from|default": "middle",
+    "$glyph_anchor_to|default": "middle",
+    "$button_label_offset|default": [ 0, -5 ],
+    "layer": 2,
+    "controls": [
+      {
+        "glyph": {
+          "type": "image",
+          "anchor_from": "$glyph_anchor_from",
+          "anchor_to": "$glyph_anchor_to",
+          "offset": "$glyph_offset",
+          "texture": "$glyph_texture",
+          "size": "$glyph_size",
+          "layer": 3,
+          "color": "$glyph_color",
+          "alpha": "$content_alpha",
+
+          "$glyph_bindings|default": [],
+          "bindings": "$glyph_bindings"
+        }
+      },
+      {
+        "tab_button_text": {
+          "type": "label",
+          "font_type": "MinecraftTen",
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "size": [ "100% - 15px", "default" ],
+          "max_size": [ "100% - 15px", "100% - 4px" ],
+          "offset": "$button_label_offset",
+          "text_alignment": "center",
+          "font_scale_factor": 0.7,
+          "text": "$button_text",
+          "layer": 3,
+          "color": "$text_color",
+          "alpha": "$content_alpha",
+
+          "$button_text_binding_type|default": "none",
+          "$button_text_grid_collection_name|default": "",
+          "$button_text_binding_condition|default": "none",
+
+          "bindings": [
+            {
+              "binding_type": "$button_text_binding_type",
+              "binding_condition": "$button_text_binding_condition",
+              "binding_collection_name": "$button_text_grid_collection_name",
+              "binding_name": "$button_text",
+              "binding_name_override": "$button_text"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  // --------------------------------------------------------------------------------------
+  // manage option controls
+  // --------------------------------------------------------------------------------------
+
+  "edit_appearance_preset_button@profile.custom_button": {
+    "size": [ "100%", 23 ],
+    "$button_focus_precedence": 20,
+    "$pressed_button_name": "button.edit_appearance_preset",
+    "$button_text": "gui.edit",
+    "bindings": [
+      {
+        "binding_name": "#enable_edit_appearance",
+        "binding_name_override": "#enabled",
+        "binding_condition": "always"
+      }
+    ]
+  },
+
+  "custom_button@common_buttons.light_text_button": {
+    "$default_button_texture|default": "textures/neko/borderless/button_borderless_dark",
+    "$hover_button_texture|default": "textures/neko/borderless/button_borderless_lighthover",
+    "$pressed_button_texture|default": "textures/neko/borderless/button_borderless_lightpressednohover",
+    "$default_text_color": [ 1.0, 1.0, 1.0 ],
+    "$hover_text_color": [ 0.0, 0.0, 0.0 ],
+    "$pressed_text_color": [ 1.0, 1.0, 1.0 ],
+    "$locked_text_color": [ 1.0, 1.0, 1.0 ],
+    "size": [ "100%- 5px", "100%- 5px" ],
+    "$glyph_size": [ 15 , 15 ],
+    "$button_type_panel": "profile.han_button_panel"
+  },
+
+  "edit_appearance_button@profile.custom_button": {
+    "$button_focus_precedence": 20,
+    "$glyph_texture": "textures/neko/main_icon/edit_skin",
+    "$pressed_button_name": "button.edit_appearance_preset",
+    "$button_text": "#edit_appearance_text",
+    "$button_text_binding_type": "global",
+    "$button_binding_condition": "always",
+    "$button_text_size": [ "100%", "100%" ],
+    "$button_text_max_size": [ "100%", "100%" ],
+    "tts_play_on_unchanged_focus_control": true,
+    "bindings": [
+      {
+        "binding_name": "(not #marketplace_disabled)",
+        "binding_name_override": "#enabled"
+      }
+    ],
+    "$focus_id": "edit_appearance_button"
+  },
+
+  ///////////////////////
+  //// delete button ////
+  "delete_appearance_button@profile.custom_button": {
+    "$button_type_panel": "profile.han_button_panel",
+    "$glyph_texture": "textures/neko/main_icon/hapus_skin",
+    "$button_text": "Hapus",
+    "$pressed_button_name": "button.delete_appearance_preset",
+    "tts_control_header": "profileScreen.delete_button",
+    "tts_play_on_unchanged_focus_control": true,
+    "$focus_id": "delete_appearance_button"
+  },
+
+  /////////////////////////
+  //// settings button ////
+  "settings_button@profile.custom_button": {
+    "$button_type_panel": "profile.han_button_panel",
+    "$glyph_texture": "textures/neko/main_icon/settings_icon",
+    "size": [ "100%- 5px", "100%- 5px" ],
+    "$button_text": "Pengaturan",
+    "$pressed_button_name": "button.settings",
+    "$button_image_content_size": [ 14, 14 ],
+    "tts_control_header": "profileScreen.settings_button",
+    "tts_play_on_unchanged_focus_control": true
+  },
+
+  "delete_appearance_preset_button@common_buttons.light_text_button": {
+    "size": [ "100%", 23 ],
+    "$pressed_button_name": "button.delete_appearance_preset",
+    "$button_text": "gui.delete"
+  },
+
+  "options_panel": {
+    "type": "panel",
+    "size": [ "37%", 30 ],
+    "offset": [ 0 , -10 ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "controls": [
+      {
+        "options_content": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100% - 10px", "100%" ],
+          "controls": [
+            { "edit_appearance_preset_button@profile.edit_appearance_preset_button": {} },
+            { "delete_appearance_preset_button@profile.delete_appearance_preset_button": {} }
+          ]
+        }
+      }
+    ]
+  },
+
+  "manage_options_content_panel": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      { "left_padding@profile.horizontal_padding_10px": {} },
+      { "options_panel@profile.options_panel": {} },
+      { "right_padding@profile.horizontal_fill_padding": {} }
+    ]
+  },
+
+  "manage_options_modal_content@common.modal_area_panel_base": {
+    "layer": "$manage_options_background",
+    "$menu_cancel_button_id": "button.manage_appearance",
+    "$close_bg_exit_button_name": "button.manage_appearance",
+    "controls": [
+      { "manage_options@profile.manage_options_content_panel": {} },
+      { "close_options_bg@common_store.close_bg_panel": {} }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#manage_options_visible",
+        "binding_name_override": "#modal"
+      },
+      {
+        "binding_name": "#manage_options_visible",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  // --------------------------------------------------------------------------------------
+  // screen controls
+  // --------------------------------------------------------------------------------------
+  "profile_screen_main_panel_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "lower_button_section@profile.lower_button_section": {
+        }
+      },
+      {
+        "profile_screen_main_content": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "size": [ "100%", "100%" ],
+          "controls": [
+            { "persona_preset_section@profile.persona_preset_section_panel": {} },
+            {
+              "debug_view@profile.debug_skin_view": {
+                "bindings": [
+                  {
+                    "binding_name": "#is_using_dressing_room_debugging",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "mid_padding@profile.vertical_fill_padding": {
+                "bindings": [
+                  {
+                    "binding_name": "(not #is_using_dressing_room_debugging)",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+            "deep_link_profile_loading@common_store.progress_loading": {
+               "layer": 999, // Make this on top
+               "$hide_failure_text": true,
+               "alpha": "$dressing_room_background_alpha",
+               "bindings": [
+                  {
+                    "binding_name": "#deep_link_profile_loading_visible",
+                    "binding_name_override": "#visible",
+                    "binding_condition": "always"
+                  }
+                ]
+              }
+            },
+            { "manage_options_modal@profile.manage_options_modal_content": {} }
+          ]
+        }
+      }
+    ] 
+  },
+
+  "panel_untuk_button": {
+    "type": "panel",
+    "size": [ "20%" , "100% - 5px " ]
+  },
+
+  "buttons_sides_padding_panel": {
+    "type": "panel",
+    "size": [ "30%", 0 ]
+  },
+
+  "lower_button_section": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ "100%", 75 ],
+    "offset": [ 0 , -10 ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "layer": 250,
+    "controls": [
+      { "left_padding@profile.buttons_sides_padding_panel": { "size": [ "30% - 60px", 0 ]}},
+      { "edit@profile.panel_untuk_button": { "controls": [{"edit_appearance_button@profile.edit_appearance_button": {}}]}},
+      { "hapus@profile.panel_untuk_button": { "bindings": [{ "binding_name": "#delete_button_enabled","binding_name_override": "#enabled","binding_condition": "always"}], "controls": [{"delete_button@profile.delete_appearance_button": {}}]}},
+      { "pengaturan@profile.panel_untuk_button": { "controls": [{"settings_button@profile.settings_button": {}}]}},
+      { "right_padding@profile.buttons_sides_padding_panel": {} }
+    ]
+  }
+}

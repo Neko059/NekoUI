@@ -1,0 +1,280 @@
+{
+    "namespace": "neko_c",
+
+    "screen_header_title_panel": {
+      "type": "panel",
+      "size": [ "fill", 17 ],
+      "$screen_header_title_visible|default": true,
+      "controls": [
+        {
+          "store_header_title": {
+            "type": "label",
+            "font_scale_factor": 1.08,
+            "font_type": "MinecraftTen",
+            "color": [ 1.0, 1.0, 1.0 ],
+            "size": [ "100%", 25 ],
+            "offset": [ 0, 6.1 ],
+            "ignored": "(not $screen_header_title_visible)",
+            "anchor_from": "left_middle",
+            "anchor_to": "left_middle",
+            "text_alignment": "left",
+            "$screen_header_title|default": "#screen_header_title",
+            "$screen_header_title_binding_type|default": "none",
+            "text": "$screen_header_title",
+            "bindings": [
+              {
+                "binding_type": "$screen_header_title_binding_type",
+                "binding_name": "$screen_header_title",
+                "binding_name_override": "$screen_header_title"
+              }
+            ]
+          }
+        }
+      ]
+    },
+
+    "store_header_with_coins": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%" ],
+    "$store_header_size|default": [ "100%", 25 ],
+    "$is_inventory_screen|default": false,
+    "$ignore_home_button|default": false,
+    "$ignore_inventory_button|default": false,
+    "$ignore_search|default": false,
+    "controls": [
+      {
+        "top_bar@neko_c.store_top_bar": {
+          "size": "$store_header_size",
+          "focus_container": true,
+          "use_last_focus": false,
+          "focus_wrap_enabled": false,
+          "focus_nagivation_mode_up": "stop",
+          "controls": [
+            {
+              "title_stack_panel": {
+                "type": "stack_panel",
+                "size": [ "100%", 19 ],
+                "orientation": "horizontal",
+                "controls": [
+                  {
+                    "padding1": {
+                      "type": "panel",
+                      "size": [ 2, "100%" ]
+                    }
+                  },
+                  { "back_button_content_panel@common_store.back_content_panel": {} },
+                  {
+                    "padding2": {
+                      "type": "panel",
+                      "size": [ 10, "100%" ]
+                    }
+                  },
+                  {
+                    "header_title_panel@neko_c.screen_header_title_panel": { 
+                      "layer": 1,
+                      "$screen_header_title_binding_type": "global"
+                    }
+                  },
+                  {
+                    "padding3": {
+                      "type": "panel",
+                      "size": [ 5, "100%" ]
+                    }
+                  },
+                  {
+                    "padding4": {
+                      "type": "panel",
+                      "size": [ 5, "100%" ]
+                    }
+                  },
+                  {
+                    "status_and_coins@common_store.status_with_coins": {
+                      "ignored": "$store_disabled",
+                      "$top_status_and_coins_visible_binding_type|default": "none",
+                      "$top_status_and_coins_visible_binding|default": "",
+                      "bindings": [
+                        {
+                          "binding_type": "$top_status_and_coins_visible_binding_type",
+                          "binding_name": "$top_status_and_coins_visible_binding",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "padding5": {
+                      "type": "panel",
+                      "size": [ 2, "100%" ]
+                    }
+                  },
+                  { "search_header_stack@common_store.search_header_stack": {} }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "child_control@$child_control": {
+          "size": [ "100%", "fill" ],
+          "layer": 2
+        }
+      }
+    ]
+  },
+
+    //bg 
+
+    // Untuk Alpha
+    // >1,0 Semakin Jelas
+    // <1.0 Semakin tidak jelas :V
+
+    "store_top_bar_filler": {
+      "type": "image",
+      "texture": "textures/ui/StoreTopBarFiller",
+      "size": [ "100%", 25 ]
+    },  
+
+    "store_top_bar": {
+      "type": "image",
+      "texture": "textures/neko/StoreTopBar",
+      "size": [ "100%", 25 ]
+    },
+
+    "bg_2": {
+      "type":  "image",
+      "layer": 999,
+      "alpha": 0.75,
+      "texture": "textures/neko/bg/bg",
+      "size": [ "100%" , "100%" ]
+    },
+
+    "bg_3": {
+      "type":  "image",
+      "layer": 999,
+      "alpha": 0.75,
+      "texture": "textures/neko/bg/bg_white",
+      "size": [ "100%" , "100%" ]
+    },
+
+    /////////////////////////////////////////////////
+    ///                                           ///
+    /// Background  play,main,settings            ///
+    ///                                           ///
+    /////////////////////////////////////////////////
+
+    "bg_profile_name": {
+      "type": "image",
+      "texture": "textures/neko/bg/bg_profile_name"
+    },
+
+    "bg_main_screen": {
+      "type": "image",
+      "layer": 1,
+      "fill": true,
+      "bilinear": true,
+      "uv_size": [ "100%c", "100%" ],
+      "texture": "textures/neko/bg/bg_main_screen"
+    },
+
+    "bg_main_screen_anim": {
+      "type": "image",
+      "layer": 5,
+      "alpha": "@anim_test.alpha_bg",
+      "texture": "textures/neko/bg/bg_pengaturan",
+      "fill": true,
+      "bilinear": true
+    },
+
+    "bg_settings_screen": {
+      "type": "image",
+      "texture": "textures/neko/bg/bg_pengaturan",
+      "layer": 2,
+      "bilinear": true,
+      "fill": true
+    },
+
+    "bg_play_screen": {
+      "type": "image",
+      "layer": 1,
+      "texture": "textures/neko/bg/bg_play_screen",
+      "bilinear": true,
+      "fill": true
+    },
+
+    "bg_play_screen_gradient": {
+      "type": "image",
+      "layer": 2,
+      "alpha":"@anim_test.alpha_bg",
+      "texture": "textures/neko/bg/bg_play_screen_gradient",
+      "bilinear": true,
+      "fill": true
+    },
+
+    ///////////////////////////////////////
+    //
+    // S E T T I N G S
+    //
+    ///////////////////////////////////////
+
+    "about_label": {
+      "type": "label",
+      "size": [ "100%", "default" ],
+      "max_size": [ "70%", 30 ],
+      "text_alignment": "left",
+      "font_type": "smooth",
+      "font_scale_factor": 1.1,
+      "shadow": false,
+      "offset": [ 5, 0 ]
+    },
+
+    "about_label_title": {
+      "type": "label",
+      "size": [ "100%", "default" ],
+      "max_size": [ "100% - 50px", "100% - 50px" ],
+      "text_alignment": "left",
+      "font_type": "smooth",
+      "font_scale_factor":0.7,
+      "shadow": false,
+      "offset": [ 5, 0 ]
+    },
+
+    "fxn_label": {
+      "type": "label",
+      "size": [ "100%", "default" ],
+      "text_alignment": "left",
+      "font_type": "MinecraftTen",
+      "shadow": false
+    },
+
+    "fxn_label_2": {
+      "type": "label",
+      "size": [ "100%", "default" ],
+      "text_alignment": "left",
+      "shadow": true
+    },
+
+    "potato_item": { "type": "image", "texture": "textures/neko/logo", "size": [ 100 , 100 ]},
+
+    "stack_panel": {
+        "type": "stack_panel",
+        "orientation": "vertical",
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "size": [ "100%" , "100%" ],
+        "controls": [
+            { "version@neko_c.about_label_title": { "text": "v7.5.15" , "font_size": "extra_large"}},
+            { "panel": { "type": "panel", "size": [ 2 , 2 ] }},
+            { "version@neko_c.about_label": { "text": "NekoUI Created by Farhan"}},
+            { "panel": { "type": "panel", "size": [ 2 , 2 ] }},
+            { "version@neko_c.about_label": { "text": "Panorama dari : @FoxyCodeX"}},
+            { "panel": { "type": "panel", "size": [ 2 , 2 ] }},
+            { "version@neko_c.about_label": { "text": "Latest Update : 04 May 2022"}},
+            { "panel": { "type": "panel", "size": [ 2 , 2 ] }},
+            { "version@neko_c.about_label": { "text": "UUID : 04 May 2022"}}
+        ]
+    },
+
+    "created_by_title@neko_c.fxn_label": { "font_scale_factor": 0.7, "text": "UI Created By:"},
+    "created_by@neko_c.fxn_label": { "font_size": "large", "text": "§bFarhan"}
+}

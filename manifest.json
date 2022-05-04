@@ -1,0 +1,40 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "Created by : Farhan\nPertama menggunakan restart dulu game nya :3",
+        "name": "§lNeko§bUI",
+        "uuid": "17836b71-3857-4d11-8807-af310c32a129",
+        "version": [7, 5, 11],
+        "min_engine_version": [1, 18, 10]
+    },
+    "modules": [
+        {
+            "description": "Created by : Farhan\nPertama menggunakan restart dulu game nya :3",
+            "type": "resources",
+            "uuid": "c0d3feaa-785e-45a9-8b57-ffdfe9381bce",
+            "version": [7, 5, 11]
+        }
+    ],
+  "subpacks": [
+   {
+      "folder_name": "korone", // Namafolder
+      "name": "Inugami Korone ( Hololive JP )", // Nama Subspack nya...
+      "memory_tier": 1
+   },
+   {
+      "folder_name": "fubuki",
+      "name": "Fubuki Shiragami ( Hololive JP )",
+      "memory_tier": 1
+   },
+   {
+      "folder_name": "Amane-Kanata",
+      "name": "Amane Kanata ( Hololive JP )",
+      "memory_tier": 1
+   },
+   {
+      "folder_name": "alpha",
+      "name": "Background NekoUI 2.7.11",
+      "memory_tier": 1
+   }
+  ] 
+}

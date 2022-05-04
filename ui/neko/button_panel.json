@@ -1,0 +1,227 @@
+{
+  "namespace": "x_button_panel",
+
+  "realms_button_panel": {
+    "type": "panel",
+    "$glyph_offset|default": [ 5, 0 ],
+    "$glyph_anchor_from|default": "left_middle",
+    "$glyph_anchor_to|default": "left_middle",
+    "$button_label_offset|default": [ 25, -1 ],
+    "layer": 2,
+    "controls": [
+      {
+        "glyph": {
+          "type": "image",
+          "anchor_from": "$glyph_anchor_from",
+          "anchor_to": "$glyph_anchor_to",
+          "offset": "$glyph_offset",
+          "texture": "$glyph_texture",
+          "size": "$glyph_size",
+          "layer": 3,
+          "color": "$glyph_color",
+          "alpha": "$content_alpha",
+
+          "$glyph_bindings|default": [],
+          "bindings": "$glyph_bindings"
+        }
+      },
+      {
+        "tab_button_text": {
+          "type": "label",
+          "font_type": "MinecraftTen",
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "size": [ "100% - 15px", "default" ],
+          "max_size": [ "100% - 15px", "100% - 4px" ],
+          "offset": "$button_label_offset",
+          "font_scale_factor": 0.75,
+          "text": "$button_text",
+          "layer": 3,
+          "color": "$text_color",
+          "alpha": "$content_alpha",
+
+          "$button_text_binding_type|default": "none",
+          "$button_text_grid_collection_name|default": "",
+          "$button_text_binding_condition|default": "none",
+
+          "bindings": [
+            {
+              "binding_type": "$button_text_binding_type",
+              "binding_condition": "$button_text_binding_condition",
+              "binding_collection_name": "$button_text_grid_collection_name",
+              "binding_name": "$button_text",
+              "binding_name_override": "$button_text"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "main_screen_button": {
+    "type": "panel",
+    "$glyph_offset": [ 4 , 0 ],
+    "$glyph_anchor_from": "left_middle",
+    "$glyph_anchor_to": "left_middle",
+    "$button_label_offset": [ 10 , -0.1 ],
+    "layer": 5,
+    "controls": [
+      {
+        "glyph": {
+          "type": "image",
+          "anchor_from": "$glyph_anchor_from",
+          "anchor_to": "$glyph_anchor_to",
+          "offset": "$glyph_offset",
+          "texture": "$glyph_texture",
+          "size": "$glyph_size",
+          "layer": 5,
+          "color": "$warna_ikon",
+          "variables": [
+            {
+              "requires": "$default_state",
+              "$warna_ikon": [ 1.0, 1.0, 1.0 ]
+            },
+            {
+              "requires": "$hover_state",
+              "$warna_ikon": [ 1.0, 1.0, 1.0 ]
+            }
+          ],
+          "alpha": "$content_alpha",
+
+          "$glyph_bindings|default": [],
+          "bindings": "$glyph_bindings"
+        }
+      },
+      {
+        "tab_button_text": {
+          "type": "label",
+          "font_type": "MinecraftTen",
+          "anchor_from": "middle",
+          "anchor_to": "middle",
+          "font_scale_factor": 0.65,
+          "text_alignment": "center",
+          "size": [ "100% - 25px", "default" ],
+          "max_size": [ "100% - 25px", "10px" ],
+          "offset": "$button_label_offset",
+          "text": "$button_text",
+          "layer": 5,
+          "color": "$text_color",
+          "alpha": "$content_alpha",
+
+          "$button_text_binding_type|default": "none",
+          "$button_text_grid_collection_name|default": "",
+          "$button_text_binding_condition|default": "none",
+
+          "bindings": [
+            {
+              "binding_type": "$button_text_binding_type",
+              "binding_condition": "$button_text_binding_condition",
+              "binding_collection_name": "$button_text_grid_collection_name",
+              "binding_name": "$button_text",
+              "binding_name_override": "$button_text"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "play_button_panel": {
+    "type": "panel",
+    "$glyph_offset|default": [ 3.5, 0 ],
+    "$glyph_anchor_from|default": "left_middle",
+    "$glyph_anchor_to|default": "left_middle",
+    "$button_label_offset|default": [ 0, -1.1 ],
+    "$button_label_offset_2|default": [ 5, 5 ],
+    "layer": 2,
+    "controls": [
+      {
+        "play_label": {
+          "type": "label",
+          "text_alignment": "center",
+          "font_type": "AGENCYB", //default "OldSmoothFont",
+          "font_scale_factor": 1.4,
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "size": [ "97% - 25px", "default" ],
+          "max_size": [ "99% - 25px", "30px" ],
+          "offset": "$button_label_offset",
+          "text": "$button_text",
+          "layer": 3,
+          "color": "$text_color",
+          "alpha": "$content_alpha"
+        }
+      }
+    ]
+  },
+
+  "pause_button_panel": {
+    "type": "panel",
+    "$glyph_offset": [ 0 , 0 ],
+    "$glyph_anchor_from": "middle",
+    "$glyph_anchor_to": "middle",
+    "$button_label_offset": [ 0, -10 ],
+    "$button_label_anchor_from": "bottom_middle",
+    "$button_label_anchor_to": "bottom_middle",
+    "layer": 5,
+    "controls": [
+      {
+        "glyph": {
+          "type": "image",
+          "anchor_from": "$glyph_anchor_from",
+          "anchor_to": "$glyph_anchor_to",
+          "offset": "$glyph_offset",
+          "texture": "$glyph_texture",
+          "size": "$glyph_size",
+          "layer": 5,
+          "color": "$warna_glyph",
+          "variables": [
+            {
+              "requires": "$default_state",
+              "$warna_glyph": [ 1.0, 1.0, 1.0 ]
+            },
+            {
+              "requires": "$hover_state",
+              "$warna_glyph": [ 1.0, 1.0, 1.0 ]
+            }
+          ],
+          "alpha": "$content_alpha",
+
+          "$glyph_bindings|default": [],
+          "bindings": "$glyph_bindings"
+        }
+      },
+      {
+        "tab_button_text": {
+          "type": "label",
+          "font_type": "MinecraftTen",
+          "anchor_from": "$button_label_anchor_from",
+          "anchor_to": "$button_label_anchor_to",
+          "font_scale_factor": 0.5,
+          "text_alignment": "center",
+          "size": [ "100% - 25px", "default" ],
+          "max_size": [ "100% - 25px", "100% - 4px" ],
+          "offset": "$button_label_offset",
+          "text": "$button_text",
+          "layer": 5,
+          "color": "$text_color",
+          "alpha": "$content_alpha",
+
+          "$button_text_binding_type|default": "none",
+          "$button_text_grid_collection_name|default": "",
+          "$button_text_binding_condition|default": "none",
+
+          "bindings": [
+            {
+              "binding_type": "$button_text_binding_type",
+              "binding_condition": "$button_text_binding_condition",
+              "binding_collection_name": "$button_text_grid_collection_name",
+              "binding_name": "$button_text",
+              "binding_name_override": "$button_text"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

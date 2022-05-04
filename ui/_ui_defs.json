@@ -1,0 +1,23 @@
+{
+  // Alphabetical order please :)
+  "ui_defs": [
+
+    // C u $ T o M J s O ? 1.0
+
+    "ui/neko/neko_c.json",
+    "ui/neko/neko_main_screen.json",
+    "ui/neko/neko_nametag.json",
+    "ui/neko/neko_anim.json",
+
+    // Pengaturan
+    "ui/neko/neko_settings_common.json",
+    "ui/neko/neko_settings_section.json",
+
+    // Play_screen
+    "ui/neko/neko_play_screen.json",
+    "ui/neko/neko_template_tabs.json",
+
+    "ui/neko/button_panel.json",
+    "ui/neko/button.json"
+  ]
+}

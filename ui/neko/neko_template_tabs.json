@@ -1,0 +1,45 @@
+{
+  "namespace": "custom_tabs",
+
+  "tab_top@common_tabs.base_tab": {
+    "$is_left_most_tab|default": false,
+    "$is_right_most_tab|default": false,
+
+    "variables": [
+      {
+        "requires": "($is_left_most_tab and not $is_right_most_tab)",
+        "$unchecked_default_image": "textures/neko/tab/TabTopBackLeftMost",
+        "$unchecked_hover_image": "textures/neko/tab/TabTopBackLeftMostHover",
+        "$unchecked_locked_image": "textures/neko/tab/TabTopBackLeftMost",
+        "$unchecked_locked_hover_image": "textures/neko/tab/TabTopBackLeftMost",
+
+        "$checked_default_image": "textures/neko/tab/TabTopFrontLeftMost",
+        "$checked_hover_image": "textures/neko/tab/TabTopFrontLeftMostHover",
+        "$checked_locked_image": "textures/neko/tab/TabTopFrontLeftMost",
+        "$checked_locked_hover_image": "textures/neko/tab/TabTopFrontLeftMost"
+      },
+      {
+        "requires": "($is_right_most_tab and not $is_left_most_tab)",
+        "$unchecked_default_image": "textures/neko/tab/TabTopBackRightMost",
+        "$unchecked_hover_image": "textures/neko/tab/TabTopBackRightMostHover",
+        "$unchecked_locked_image": "textures/neko/tab/TabTopBackRightMost",
+        "$unchecked_locked_hover_image": "textures/neko/tab/TabTopBackRightMost",
+
+        "$checked_default_image": "textures/neko/tab/TabTopFrontRightMost",
+        "$checked_hover_image": "textures/neko/tab/TabTopFrontRightMostHover",
+        "$checked_locked_image": "textures/neko/tab/TabTopFrontRightMost",
+        "$checked_locked_hover_image": "textures/neko/tab/TabTopFrontRightMost"
+      }
+    ],
+
+    "$unchecked_default_image": "textures/neko/tab/TabTopBack",
+    "$unchecked_hover_image": "textures/neko/tab/TabTopBackHover",
+    "$unchecked_locked_image": "textures/neko/tab/TabTopBack",
+    "$unchecked_locked_hover_image": "textures/neko/tab/TabTopBack",
+
+    "$checked_default_image|default": "textures/neko/tab/TabTopFront",
+    "$checked_hover_image|default": "textures/neko/tab/TabTopFrontHover",
+    "$checked_locked_image|default": "textures/neko/tab/TabTopFront",
+    "$checked_locked_hover_image|default": "textures/neko/tab/TabTopFront"
+  }
+}

@@ -1,0 +1,217 @@
+{
+  "namespace": "x_button",
+
+  "fx_realms_button@common_buttons.light_text_button": {
+    "$button_type_panel": "x_button_panel.realms_button_panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "$border_visible": false,
+    "size": [ "100%" , "100%" ],
+    "$glyph_size": [ 15, 15 ],
+    "$default_text_color|default": [ 1.0, 1.0, 1.0 ],
+    "$hover_text_color|default": [ 1.0, 1.0, 1.0 ],
+    "$pressed_text_color|default": [ 1.0, 1.0, 1.0 ],
+    "$locked_text_color|default": [ 0.7, 0.7, 0.7 ]
+  },
+
+  "create_new_button_panel@common_buttons.new_ui_binding_button_label": {
+    "layer": 10,
+    "$anchor|default": "middle",
+    "font_type": "MinecraftTen",
+    "font_scale_factor": 1.1,
+    "offset": [ 0 , -1.1 ] //  X , Y
+  },
+
+  "fx_create_new_button@common_buttons.light_text_button": {
+    "$border_visible": false,
+    "$button_type_panel": "x_button.create_new_button_panel",
+    "size": [ "100%" , "100%" ],
+    "$default_text_color|default": [ 0.0, 0.0, 0.0 ],
+    "$hover_text_color|default": [ 0.81, 0.98, 1.00 ],
+    "$pressed_text_color|default": [ 1.0, 1.0, 1.0 ],
+    "$locked_text_color|default": [ 0.3, 0.3, 0.3 ],
+    "$default_button_texture|default": "textures/neko/light",
+    "$hover_button_texture|default": "textures/neko/lighthover",
+    "$pressed_button_texture|default": "textures/neko/lightpressed",
+    "$locked_button_texture|default": "textures/neko/locked"
+  },
+
+  "play_button@common_buttons.light_text_button": {
+    "size": [ "100%" , "100%" ],
+    "$default_text_color|default": [ 0.0, 0.0, 0.0 ],
+    "$hover_text_color|default": [ 1.0, 1.0, 1.0 ],
+    "$pressed_text_color|default": [ 0.0, 0.0, 0.0 ],
+    "$locked_text_color|default": [ 1.00, 0.26, 0.26 ],
+    "$button_text": "START",
+    "$texture_icon": "textures/neko/main_icon/play_icon",
+    "$ukuran_icon": [ 16 , 16 ],
+    "$button_type_panel": "x_button_panel.play_button_panel",
+    "$default_button_texture|default": "textures/neko/start_button/fxbutton_hover",
+    "$hover_button_texture|default": "textures/neko/start_button/fxbutton_pressed",
+    "$pressed_button_texture|default": "textures/neko/start_button/fxbutton_pressed",
+    "$pressed_button_name": "$play_button_target"
+  },    
+
+  ///////////////////
+  // FXBUTTON 2    //
+  ///////////////////
+
+  
+  "test_code": {
+    "$ukuran_tombol":  [ "100%" , "100%" ],
+    "$darimana": "top_left",
+    "$kemana": "top_left",
+    "$corebutton": "x_button.fxbutton2", // (x_button = namespace!)
+
+    "anchor_from": "$darimana",
+    "anchor_to": "$kemana",
+    "size": "$ukuran_tombol",
+    "controls": [
+      { "lah@$corebutton": {} }
+    ]
+  },
+
+  "fxbutton2@common_buttons.light_text_button": {
+    "$default_button_texture|default": "",
+    "$hover_button_texture|default": "textures/neko/main_ui_button/lighthover",
+    "$pressed_button_texture|default": "textures/neko/main_ui_button/lightpressed",
+    "$locked_button_texture|default": "",
+    "$button_type_panel": "x_button_panel.main_screen_button",
+    "$border_visible": false,
+    "$default_text_color|default": [ 0.0, 0.0, 0.0 ],
+    "$hover_text_color|default": [ 1.00, 0.42, 0.67 ],
+    "$pressed_text_color|default": [ 1.00, 0.00, 0.43 ],
+    "$locked_text_color|default": [ 0.0, 0.0, 0.0 ]
+  },  
+  
+ "store_button@x_button.fxbutton2": {
+   "$glyph_size": [ 16, 16 ],
+   "$glyph_texture": "textures/neko/main_icon/store_icon",
+   "$pressed_button_name": "button.menu_store",
+   "$button_text": "menu.store"
+  },
+
+ "achievements_button@x_button.fxbutton2": {
+    "$glyph_size": [ 15, 15 ],
+    "$glyph_texture": "textures/neko/main_icon/achievements_icon",
+    "$pressed_button_name": "button.menu_achievements",
+    "$button_text": "menu.achievements"
+  },
+
+  "settings_button@x_button.fxbutton2": {
+    "$glyph_size": [ 15, 15 ],
+    "$glyph_texture": "textures/neko/main_icon/settings_icon",
+    "$pressed_button_name": "button.menu_settings",
+    "$button_text": "menu.settings"
+  },
+
+  "exit_button@x_button.fxbutton2": {
+    "$glyph_texture": "textures/neko/main_icon/exit_icon",
+    "$pressed_button_name": "button.menu_exit",
+    "$button_text": "Exit"
+  },
+
+  "achievements_button_old@x_button.fxbutton2": {
+    "$glyph_texture": "textures/ui-x/icon-new/dot",
+    "$pressed_button_name": "button.menu_achievements",
+    "$button_text": "Prestasi"
+  },
+
+  "profile_button@x_button.fxbutton2": {
+    "$glyph_size": [ 15, 15 ],
+    "$glyph_texture": "textures/neko/main_icon/profile_icon",
+    "$pressed_button_name": "button.to_profile_screen",
+    "$button_text": "profileScreen.header"
+  },
+
+  ////////////// 
+  // Pause //
+
+  "profile_button_pause@x_button.fxbutton2": {
+    "$glyph_size": [ 15, 15 ],
+    "$glyph_texture": "textures/neko/main_icon/profile_icon",
+    "$pressed_button_name": "button.to_profile_or_skins_screen",
+    "$button_text": "profileScreen.header"
+  },
+
+  "screen_shot_pause@x_button.fxbutton2": {
+    "$glyph_size": [ 15, 15 ],
+    "$glyph_texture": "textures/ui/camera-yo",
+    "$pressed_button_name": "button.screenshot",
+    "$button_text": "Screenshot"
+  },
+  
+  
+  ///////////////////
+  // FXBUTTON 3    //
+  ///////////////////
+
+  "fxbutton3@common_buttons.light_content_button": {
+    "$default_button_texture|default": "",
+    "$hover_button_texture|default": "",
+    "$pressed_button_texture|default": "",
+    "$default_state_border_visible": false,
+    "$hover_state_border_visible": true,
+    "$pressed_state_border_visible": true,
+    "$locked_state_border_visible": false,
+    "size": [ "100% - 5px", "100% - 5px" ]
+  },
+
+  "ikon_exit": {
+    "type": "image",
+    "size": [ 14, 14 ],
+    "texture": "textures/neko/main_icon/exit_icon"
+  },
+
+  "ikon_signin": {
+    "type": "image",
+    "size": [ 15, 15 ],
+    "texture": "textures/neko/main_icon/xboxsign"
+  },
+
+  "ikon_feedback": {
+    "type": "image",
+    "size": [ 15, 15 ],
+    "texture": "textures/neko/main_icon/feedback"
+  },
+
+  "exit_button@x_button.fxbutton3": {
+    "$button_content": "x_button.ikon_exit",
+    "$pressed_button_name": "button.menu_exit"
+  },
+
+  "signin_xbox@x_button.fxbutton3": {
+    "$button_content": "x_button.ikon_signin",
+    "$pressed_button_name": "button.signin"
+  },
+
+  "feedback_button@common_buttons.hyperlink_content_button": {
+    "$default_button_texture|default": "",
+    "$hover_button_texture|default": "",
+    "$pressed_button_texture|default": "",
+    "$default_state_border_visible": false,
+    "$hover_state_border_visible": true,
+    "$pressed_state_border_visible": true,
+    "size": [ "100% - 5px", "100% - 5px" ],
+    "$locked_state_border_visible": false,
+    "property_bag": {
+      "#hyperlink": "https://aka.ms/minecraftfb"
+    },
+    "$button_content": "x_button.ikon_feedback"
+  },
+
+  "pause_button_template@common_buttons.light_text_button": {
+    "size": [ "100% - 5px", "100% - 5px" ],
+    "$glyph_size": [ 20, 20 ],
+    "$border_visible": true,
+    "$button_type_panel": "x_button_panel.pause_button_panel",
+    "$default_text_color|default": [ 1.0, 1.0, 1.0 ],
+    "$hover_text_color|default": [ 0.81, 0.98, 1.00 ],
+    "$pressed_text_color|default": [ 1.00, 0.00, 0.43 ],
+    "$locked_text_color|default": [ 1.00, 0.26, 0.26 ],
+    "$default_button_texture|default": "textures/neko/borderless/pause/button_borderless_dark",
+    "$hover_button_texture|default": "textures/neko/borderless/pause/button_borderless_dark_hover",
+    "$pressed_button_texture|default": "textures/neko/borderless/pause/button_borderless_dark_pressed",
+    "$locked_button_texture|default": "textures/neko/borderless/pause/button_borderless_dark"
+  }
+}

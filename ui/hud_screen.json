@@ -1,0 +1,548 @@
+{
+  "namespace": "hud",
+
+
+  // Button Images //
+
+  "buang_1_item": {
+    "type": "image",
+    "size": [ 18, 18 ],
+    "texture": "textures/ui-x/icon-new/drop_1x"
+  },
+
+  "buang_stack_item": {
+    "type": "image",
+    "size": [ 18, 18 ],
+    "texture": "textures/ui-x/icon-new/drop_64x"
+  },
+
+  "des_item": {
+    "type": "image",
+    "size": [ 18, 18 ],
+    "texture": "textures/ui-x/icon-new/des_item"
+  },
+
+  "sembunyikan_gui": {
+    "type": "image",
+    "size": [ 18, 18 ],
+    "texture": "textures/ui-x/icon-new/hide_gui"
+  },
+
+  //---------------------------------------------------------------------------
+  // Hud Screen
+  //---------------------------------------------------------------------------
+
+
+  "exp_progress_bar_and_hotbar": {
+    "type": "panel",
+    "size": [ "100%c", 31 ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "offset": "$xp_control_offset",
+    "controls": [
+      {
+        "resizing_xp_bar_with_hotbar": {
+          "type": "panel",
+          "size": [ "100%c", 5 ],
+          "controls": [
+            {
+              "empty_progress_bar@empty_progress_bar": {
+                "size": [ "100%c", 5 ],
+                "layer": 1,
+                "controls": [
+                  {
+                    "full_progress_bar@full_progress_bar": {
+                      "size": [ "100%c + 10px", 5 ],
+                      "layer": 2,
+                      "controls": [
+                        {
+                          "progress_bar_nub@progress_bar_nub": {
+                            "size": [ "100%c - 10px", 5 ],
+                            "max_size": [ 172, 5 ],
+                            "layer": 3,
+                            "controls": [
+                              {
+                                "hotbar@hotbar_chooser": {
+                                  "offset": [ 4, 16 ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "progress_text_label@progress_text_label": {
+                "offset": [ 0, 0 ],
+                "layer": 7
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#is_not_creative_mode",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      // For when we hide the XP bar in Creative Move we still want to display the HUD
+      {
+        "hotbar@hotbar_chooser": {
+          "offset": [ 4, 16 ],
+          "bindings": [
+            {
+              "binding_name": "#is_creative_mode",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "item_text_factory": {
+          "size": [ 100, 10 ],
+          "type": "factory",
+          "control_ids": {
+            "item_text": "@hud.item_name_text",
+            "jukebox_text": "@hud.jukebox_popup_text"
+          }
+        }
+      }
+    ]
+  },
+
+  "full_progress_bar": {
+    "type": "image",
+    "texture": "textures/gui/experience/full",
+    "clip_direction": "left",
+    "clip_pixelperfect": false,
+    "bindings": [
+      {
+        "binding_name": "#exp_progress",
+        "binding_name_override": "#clip_ratio",
+        "binding_type": "global"
+      }
+    ]
+  },
+
+  "empty_progress_bar": {
+    "type": "image",
+    "texture": "textures/gui/experience/empty"
+  },
+
+  "hotbar_slot_image": {
+    "type": "image",
+    "offset": [ 0, 0 ],
+    "size": [ 20, 22 ],
+    "layer": 1,
+    "alpha": 0.8
+  },
+
+  "han_button@common_buttons.light_content_button": {
+    "$default_button_texture|default": "",
+    "$hover_button_texture|default": "",
+    "$pressed_button_texture|default": "",
+    "anchor_from": "bottom_right",
+    "anchor_to": "bottom_right",
+    "$default_state_border_visible": false,
+    "$hover_state_border_visible": false,
+    "$pressed_state_border_visible": false,
+    "$locked_state_border_visible": false,
+    "size": [ 26, 26]
+  },
+
+  "sembunyikan_hud@hud.han_button": {
+    "$button_content": "hud.sembunyikan_gui",
+    "$pressed_button_name": "button.hide_gui_all"
+  },
+
+  "render_jam": {
+    "type": "custom",
+    "size": [ 20 , 20 ],
+    "renderer": "inventory_item_renderer",
+    "property_bag": {
+      "#item_id_aux": 22740992
+    }
+  },
+
+  "render_kompas": {
+    "type": "custom",
+    "size": [ 20 , 20 ],
+    "renderer": "inventory_item_renderer",
+    "property_bag": {
+      "#item_id_aux": 22609920
+    }
+  },
+
+  "render_jam_dan_kompass": {
+    "type": "panel",
+    "size": [ 100 , 20 ],
+    "offset": [ -3 , -3 ],
+    "anchor_from": "bottom_right",
+    "anchor_to": "bottom_right",
+    "controls": [
+      {
+        "render_jam_dan_kompass": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "controls": [
+            {
+              "jam@hud.render_jam": {}
+            },
+            {
+              "kompass@hud.render_kompas": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "tombol_extra": {
+    "type": "panel",
+    "size": [ "100%" , 20 ],
+    "offset": [ -3 , "3.5%" ],
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "controls": [
+      {
+        "stack_tombol_extra": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "controls": [
+            {
+              "sembunyikan_hud@hud.sembunyikan_hud": { "ignored": "$win10_edition" }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "root_panel": {
+    "type": "panel",
+    "$xp_control_offset|default": [ 0, -13 ],
+    "variables": [
+      {
+        "requires": "(not $desktop_screen)",
+        "$xp_control_offset": [ 0, -11 ]
+      },
+      {
+        "requires": "$education_edition",
+        "$left_helpers": "hud.left_helpers_edu"
+      },
+      {
+        "requires": "(not $education_edition)",
+        "$left_helpers": "hud.left_helpers"
+      }
+    ],
+    "controls": [
+      {
+        "player_position_text": {
+          "type": "label",
+          "text": "#text",
+          "font_type": "smooth",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "shadow": true,
+          "alpha": 1.00,
+          "offset": [ 0, 20 ],
+          "bindings": [
+            {
+              "binding_name": "#player_position_visible",
+              "binding_name_override": "#visible",
+              "binding_type": "global"
+            },
+            {
+              "binding_name": "#player_position_text",
+              "binding_name_override": "#text",
+              "binding_condition": "always_when_visible",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "left_helpers@$left_helpers": {}
+      },
+      {
+        "right_helpers@hud.right_helpers": {}
+      },
+      { "centered_gui_elements@centered_gui_elements": {} },
+      { "centered_gui_elements_at_bottom_middle@centered_gui_elements_at_bottom_middle": {} },
+      {
+        "centered_ridingvr_gui_elements@centered_gui_elements_at_bottom_middle": {
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [ 0, 60 ],
+          "size": [ 180, 50 ],
+          "bindings": [
+            {
+              "binding_name": "#hud_visible_centered_ridingvr",
+              "binding_name_override": "#visible",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      { "not_centered_gui_elements@not_centered_gui_elements": {} },
+      {
+        "gamertag_label_for_splitscreen": {
+          "type": "label",
+          "size": [ "default", "default" ],
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [ -4, 4 ],
+          "color": "$hud_gamertag_color",
+          "text_alignment": "right",
+          "text": "#gamertag",
+          "bindings": [
+            {
+              "binding_name": "#gamertag"
+            }
+          ]
+        }
+      },
+      {
+        "exp_rend@exp_progress_bar_and_hotbar": {
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "bindings": [
+            {
+              "binding_name": "#hotbar_visible_not_centered",
+              "binding_name_override": "#visible",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "hud_tip_text_factory": {
+          "type": "factory",
+          "control_name": "@hud.hud_tip_text"
+        }
+      },
+      {
+        "hud_actionbar_text_area": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "hud_actionbar_text@hud.hud_actionbar_text"
+            }
+          }
+        }
+      },
+      {
+        "hud_title_text_area": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_title_text_factory",
+            "control_ids": {
+              "hud_title_text": "hud_title_text@hud.hud_title_text"
+            }
+          }
+        }
+      },
+      {
+        "mob_effects_renderer@mob_effects_renderer": {
+          "size": [ "100%", "75%" ],
+          "offset": [ 0, 24 ],
+          "anchor_from": "center",
+          "anchor_to": "center"
+        }
+      },
+      { "vignette_rend@vignette_renderer": {} },
+      { "curor_rend@cursor_renderer": {} },
+      {
+        "game_tip@game_tip.game_tip_panel": {
+          "$offset": [ 0, "-90px" ],
+          "variables": [
+            {
+              "requires": "$pocket_screen",
+              "$offset": [ 0, "-60px" ]
+            }
+          ],
+          "offset": "$offset"
+        }
+      },
+      { "sidebar@scoreboard.scoreboard_sidebar": {} },
+      {
+        "progress_rend@progress_indicator_renderer": {
+          "offset": [ "50%", "50%" ]
+        }
+      },
+      {
+        //We need to be able to move chat down the screen when we are in VR and riding.
+        //SO use a stack panel with a padding that we can ignore at runtime as needed
+        "chat_stack": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "size": [ "40%", "100%" ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "controls": [
+            {
+              "paper_doll_padding": {
+                "type": "panel",
+                "size": [ "100%", 50 ],
+                "bindings": [
+                  {
+                    "binding_name": "#paper_doll_visible",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "paper_doll_padding_living_room": {
+                "type": "panel",
+                "size": [ "100%", 30 ],
+                "bindings": [
+                  {
+                    "binding_name": "#paper_doll_visible_living_room",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "vr_riding_chat_padding": {
+                "type": "panel",
+                "size": [ "100%", 132 ],
+                "visible": "#vr_riding", //Make this visible to move the chat panel down
+                "bindings": [
+                  {
+                    "binding_name": "#vr_riding",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "vr_chat_padding": {
+                "type": "panel",
+                "size": [ "100%", 30 ],
+                "visible": "#vr_non_riding", //Make this visible to move the chat panel down
+                "bindings": [
+                  {
+                    "binding_name": "#vr_non_riding",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "non_centered_gui_padding": {
+                "type": "panel",
+                "size": [ "100%", 32 ],
+                "bindings": [
+                  {
+                    "binding_name": "#hud_visible_not_centered",
+                    "binding_name_override": "#visible",
+                    "binding_type": "global"
+                  }
+                ]
+              }
+            },
+            { "chat_panel@hud.chat_panel": {} }
+          ]
+        }
+      },
+      {
+        "boss_health_panel": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "size": [ "100%", "100%" ],
+          "controls": [
+            {
+              "boss_hud_padding": {
+                "type": "panel",
+                "size": [ "100%", 20 ],
+                "visible": "#boss_hud_padding", //Make this visible to move the boss hud panel down
+                "bindings": [
+                  {
+                    "binding_name": "#boss_hud_padding",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "boss_hud_panel": {
+                "type": "panel",
+                "controls": [
+                  {
+                    "boss_health_grid@boss_health_grid": {
+                      "offset": [ 0, 2 ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "save_icon@hud.auto_save": {
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#hud_visible",
+        "binding_name_override": "#visible",
+        "binding_type": "global"
+      },
+      {
+        "binding_name": "#hud_alpha",
+        "binding_name_override": "#alpha",
+        "binding_type": "global"
+      },
+      {
+        "binding_name": "#hud_propagate_alpha",
+        "binding_name_override": "#propagateAlpha",
+        "binding_type": "global"
+      }
+    ]
+  },
+
+  "hud_content": {
+    "type": "panel",
+    "$hud_size": [ "100%", "100%" ],
+    "$hud_player_rend_desktop_offset|default": [ 15, 15 ],
+    "variables": [
+      {
+        "requires": "($is_holographic and not $is_living_room_mode)",
+        "$hud_player_rend_desktop_offset": [ 100, 50 ]
+      },
+      {
+        "requires": "($compress_hud_width)",
+        "$hud_size": [ "90%", "100%" ]
+      }
+    ],
+    "size": "$hud_size",
+    "controls": [
+      {
+        "tombol_extra@hud.tombol_extra": {}
+      },
+      {
+        "render_jam_dan_kompass@hud.render_jam_dan_kompass": {}
+      },
+      {
+        "root_panel@hud.root_panel": {}
+      },
+      {
+        "camera_renderer@camera_renderer": {}
+      }
+    ]
+  }
+}

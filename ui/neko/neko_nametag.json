@@ -75,30 +75,9 @@
     ]
   },
 
-  "panel": {
-    "type": "image",
-    "layer": 5,
-    "texture": "textures/ui-x/dialog/bg_2"
-  },
-
-  "xbox_icon_0": {
-    "type": "image",
-    "layer": 6,
-    "texture": "textures/ui-x/icon-new/warn",
-    "size": [ 12 , 12 ]
-  },
-
-  "bg_2": {
-    "type":  "image",
-    "alpha": 0.75,
-    "layer": 5,
-    "texture": "textures/neko/bg/bg",
-    "size": [ "100%" , "100%" ]
-  },
-
   "nametag_panel@neko_c.bg_2": {
     "size": [ "100%" , 27 ],
-    "alpha": 1,
+    "alpha": 0.75,
     "controls": [
       {
         "nametag_stackpanel": {

@@ -1,5 +1,6 @@
 ﻿## Note : 
-## Bahasa : Finlandia
+## Bahasa :
+## Ga ada translator ke fi_FI.lang, aneh. lang default.
 
 # SETTINGS
 neko.graphics=Graphics
@@ -10,10 +11,3 @@ neko.title_gameplay=Gameplay Settings
 
 neko.about=About
 neko.title_about=About
-
-# PLAY SCREEN
-neko.createworld.desc = Luo uusi maailma
-neko.importworld.desc = Maailman tuonti
-neko.addserver.desc = Lisää palvelin
-
-neko.button.importbutton = Maailman tuonti

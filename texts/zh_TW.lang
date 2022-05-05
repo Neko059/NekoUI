@@ -1,5 +1,5 @@
 ﻿## Note : 
-## Bahasa : Taiwan (?)
+## Bahasa :
 
 # SETTINGS
 neko.graphics=图形
@@ -10,10 +10,3 @@ neko.title_gameplay=游戏设置
 
 neko.about=关于
 neko.title_about=关于
-
-# PLAY SCREEN
-neko.createworld.desc = 創造一個新世界
-neko.importworld.desc = 導入世界
-neko.addserver.desc = 添加世界
-
-neko.button.importbutton = 導入世界

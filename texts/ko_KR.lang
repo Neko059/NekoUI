@@ -1,5 +1,5 @@
 ﻿## Note : 
-## Bahasa : Korea ( South Korea )
+## Bahasa :
 
 # SETTINGS
 neko.graphics=제도법
@@ -10,10 +10,3 @@ neko.title_gameplay=게임 플레이 설정
 
 neko.about=에 대한
 neko.title_about=에 대한
-
-# PLAY SCREEN
-neko.createworld.desc = 새로운 세상 만들기
-neko.importworld.desc = 세계 수입
-neko.addserver.desc = 서버 추가
-
-neko.button.importbutton = 세계 수입

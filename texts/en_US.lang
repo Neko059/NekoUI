@@ -12,7 +12,7 @@ neko.about=About
 neko.title_about=About
 
 # PLAY SCREEN
-neko.createworld.desc = Add New World
+neko.createworld.desc = Create New World
 neko.importworld.desc = Import World
 neko.addserver.desc = Add Server
 

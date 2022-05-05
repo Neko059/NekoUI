@@ -1,5 +1,5 @@
 ﻿## Note : 
-## Bahasa : pt_BR Brazil , pt_PT Portugis, bingung saya. Jadi saya samakan saja dengan brazil
+## Bahasa :
 
 # SETTINGS
 neko.graphics=Gráficos
@@ -10,10 +10,3 @@ neko.title_gameplay=Configurações de jogo
 
 neko.about=Cerca de
 neko.title_about=Cerca de
-
-# PLAY SCREEN
-neko.createworld.desc = Crie um novo mundo
-neko.importworld.desc = Importação Mundial
-neko.addserver.desc = Adicionar servidor
-
-neko.button.importbutton = Importação Mundial

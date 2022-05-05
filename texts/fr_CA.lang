@@ -1,5 +1,5 @@
 ﻿## Note : 
-## Bahasa : Catalan
+## Bahasa :
 
 # SETTINGS
 neko.graphics=Graphique
@@ -10,10 +10,3 @@ neko.title_gameplay=Paramètres de jeu
 
 neko.about=Sur
 neko.title_about=Sur
-
-# PLAY SCREEN
-neko.createworld.desc = Crea un món nou
-neko.importworld.desc = Importació mundial
-neko.addserver.desc = Afegeix servidor
-
-neko.button.importbutton = Importació mundial

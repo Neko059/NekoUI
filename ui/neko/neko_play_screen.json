@@ -204,7 +204,7 @@
 
 "create_new_world_button@play_ui.custom_button": {
   "$glyph_texture": "textures/neko/main_icon/worldsIcon",
-  "$desc_button_text": "Create Worlds",
+  "$desc_button_text": "Explore The New Worls",
   "variables": [
     {
       "requires": "($local_world_upload)",
@@ -215,7 +215,7 @@
       "$pressed_button_name": "button.menu_local_world_create"
     }
   ],
-  "$button_text": "Explore The New Worls",
+  "$button_text": "Create Worlds",
   "$button_focus_precedence": 10,
   "$create_new_row_focus_override_up|default": "close_button",
   "$focus_override_up": "$create_new_row_focus_override_up",

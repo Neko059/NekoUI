@@ -204,7 +204,7 @@
 
 "create_new_world_button@play_ui.custom_button": {
   "$glyph_texture": "textures/neko/main_icon/worldsIcon",
-  "$desc_button_text": "neko.createworld.desc",
+  "$desc_button_text": "Create Worlds",
   "variables": [
     {
       "requires": "($local_world_upload)",
@@ -215,7 +215,7 @@
       "$pressed_button_name": "button.menu_local_world_create"
     }
   ],
-  "$button_text": "Create world",
+  "$button_text": "Explore The New Worls",
   "$button_focus_precedence": 10,
   "$create_new_row_focus_override_up|default": "close_button",
   "$focus_override_up": "$create_new_row_focus_override_up",
@@ -224,8 +224,8 @@
 
 "import_world_button@play_ui.custom_button": {
   "$glyph_texture": "textures/neko/main_icon/import_world",
-  "$desc_button_text": "neko.createworld.desc",
-  "$button_text": "neko.button.importbutton",
+  "$desc_button_text": "Import World from External Storage",
+  "$button_text": "Import World",
   "variables": [
     {
       "requires": "($local_world_upload)",
@@ -238,6 +238,8 @@
   ]
 },
 
+// sad
+
 
 "create_server_button@common_toggles.light_content_toggle": {
   "anchor_from": "center",
@@ -245,7 +247,7 @@
   "size": [ "100% - 5px" , "100%" ],
   "$glyph_texture": "textures/neko/main_icon/add_server",
   "$button_text": "Add Server",
-  "$desc_button_text": "neko.addservers.desc",
+  "$desc_button_text": "Add Custom Servers",
 
   //Warna
   

@@ -1,5 +1,5 @@
 ﻿## Note : 
-## Bahasa :
+## Bahasa : Russia 
 
 # SETTINGS
 neko.graphics=Графика
@@ -10,3 +10,10 @@ neko.title_gameplay=Настройки игрового процесса
 
 neko.about=О
 neko.title_about=О
+
+# PLAY SCREEN
+neko.createworld.desc = Создайте новый мир
+neko.importworld.desc = Мировой импорт
+neko.addserver.desc = Добавить сервер
+
+neko.button.importbutton = Мировой импорт

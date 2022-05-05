@@ -1,5 +1,5 @@
 ﻿## Note : 
-## Bahasa :
+## Bahasa : Italia
 
 # SETTINGS
 neko.graphics=Grafica
@@ -10,3 +10,8 @@ neko.title_gameplay=Impostazioni di gioco
 
 neko.about=Di
 neko.title_about=Di
+
+# PLAY SCREEN
+neko.createworld.desc = Crea un nuovo mondo
+neko.importworld.desc = importazione mondiale
+neko.addserver.desc = Aggiungi server

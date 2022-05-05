@@ -10,3 +10,10 @@ neko.title_gameplay=ゲームプレーオップシオン
 
 neko.about=アバウット
 neko.title_about=リソースパックについて
+
+# PLAY SCREEN
+neko.createworld.desc = 新しい世界を作る
+neko.importworld.desc = ワールドインポート
+neko.addserver.desc = サーバーを追加する
+
+neko.button.importbutton = ワールドインポート

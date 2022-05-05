@@ -1,5 +1,5 @@
 ﻿## Note : 
-## Bahasa :
+## Bahasa : Slovakia
 
 # SETTINGS
 neko.graphics=Grafika
@@ -10,3 +10,10 @@ neko.title_gameplay=Nastavenia hry
 
 neko.about=O
 neko.title_about=O
+
+# PLAY SCREEN
+neko.createworld.desc = Vytvorte nový svet
+neko.importworld.desc = Svetový dovoz
+neko.addserver.desc = Pridať server
+
+neko.button.importbutton = Svetový dovoz

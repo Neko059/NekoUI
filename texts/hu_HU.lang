@@ -1,5 +1,5 @@
 ﻿## Note : 
-## Bahasa :
+## Bahasa : Hungaria
 
 # SETTINGS
 neko.graphics=Grafika
@@ -10,3 +10,10 @@ neko.title_gameplay=Játékmenet beállításai
 
 neko.about=Ról ről
 neko.title_about=Ról ről
+
+# PLAY SCREEN
+neko.createworld.desc = Hozz létre egy új világot
+neko.importworld.desc = Import világ
+neko.addserver.desc = Szerver hozzáadása
+
+neko.button.importbutton = Import világ

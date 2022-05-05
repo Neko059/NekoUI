@@ -1,5 +1,5 @@
 ﻿## Note : 
-## Ini Bahasa :
+## Ini Bahasa : Spanyol
 
 # SETTINGS
 neko.graphics=Gráficos
@@ -10,3 +10,13 @@ neko.title_gameplay=Configuración de juego
 
 neko.about=Sobre
 neko.title_about=Sobre
+
+# PLAY SCREEN
+neko.button.createworld = Crear un nuevo mundo
+neko.createworld.desc = ¡Explora nuevos mundos!
+
+neko.button.importbutton = importación mundial
+neko.importworld.desc = Importar mundo desde el almacenamiento
+
+neko.button.addserver = agregar servidor
+neko.addserver.desc = Agregar servidor personalizado

@@ -1,5 +1,5 @@
 ﻿## Note : 
-## Bahasa :
+## Bahasa : Turki
 
 # SETTINGS
 neko.graphics=Grafikler
@@ -10,3 +10,13 @@ neko.title_gameplay=Oynanış Ayarları
 
 neko.about=Hakkında
 neko.title_about=Hakkında
+
+# PLAY SCREEN
+neko.button.createworld = Yeni Bir Dünya Yarat
+neko.createworld.desc = Yeni dünyaları keşfedin!
+
+neko.button.importbutton = İthalat dünyası
+neko.importworld.desc = Dünyayı depodan içe aktar
+
+neko.button.addserver = Sunucu ekle
+neko.addserver.desc = Özel sunucu ekle

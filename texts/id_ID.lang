@@ -13,10 +13,10 @@ neko.title_about=Tentang ResourcePack
 
 # PLAY SCREEN
 neko.button.createworld = Buat Dunia Baru
-neko.createworld.desc = Jelajahi dunia baru!
+neko.createworld.desc = Jelajahi dunia baru !
 
-neko.button.addservers = Tambah Server
-neko.addservers.desc = Tambah kustom server
+neko.button.importbutton = Impor Dunia
+neko.importworld.desc = Impor Dunia Dari Penyimpanan
 
-neko.button.importbutton = Import Dunia
-neko.importworld.desc = Import dunia dari Eksternal Storage
+neko.button.addserver = Tambah Server
+neko.addserver.desc = Tambah kustom server

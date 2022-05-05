@@ -496,7 +496,7 @@
     ]
   },
 
-  "panel_bawah@neko_c.bg_2": {
+  "panel_bawah@neko_c.bg_3": {
     "anchor_to": "bottom_middle",
     "anchor_from": "bottom_middle",
     "size": [ "100%", "27px" ],
@@ -507,11 +507,11 @@
           "size": [ "100%", "100%" ],
           "orientation": "horizontal",
           "controls": [
-            { "spacer_left": { "type": "panel", "size": [ "20%", "100%" ]}},
+            { "spacer_left": { "type": "panel", "size": [ "30%", "100%" ]}},
             { "profile_button_pause@rem.panel_icon_2": {"controls":[{ "profile_button_pause@x_button.profile_button_pause": {}}]}},
             { "achievements_button@rem.panel_icon_2": {"bindings": [{ "binding_name": "#store_button_visibles", "binding_name_override": "#enabled" }], "controls":[{ "achievements_button@x_button.achievements_button": {}}]}},
             { "screen_shot_pause@rem.panel_icon_2": { "controls":[{ "screen_shot_pause@x_button.screen_shot_pause": {}}]}},
-            { "spacer_right": { "type": "panel", "size": [ "20%", "100%" ]}}
+            { "spacer_right": { "type": "panel", "size": [ "30%", "100%" ]}}
           ]
         }
       }

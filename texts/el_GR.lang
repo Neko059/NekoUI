@@ -1,5 +1,5 @@
 ﻿## Note : 
-## Bahasa :
+## Bahasa : Yunani
 
 # SETTINGS
 neko.graphics=Γραφικά
@@ -10,3 +10,13 @@ neko.title_gameplay=Ρυθμίσεις παιχνιδιού
 
 neko.about=Σχετικά με
 neko.title_about=Σχετικά με
+
+# PLAY SCREEN
+neko.button.createworld = δημιουργήστε έναν νέο κόσμο
+neko.createworld.desc = Εξερευνήστε νέους κόσμους!
+
+neko.button.importbutton = παγκόσμια εισαγωγή
+neko.importworld.desc = Εισαγωγή κόσμου από αποθήκευση
+
+neko.button.addserver = προσθήκη διακομιστή
+neko.addserver.desc = Προσθήκη προσαρμοσμένου διακομιστή

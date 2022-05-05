@@ -1,5 +1,5 @@
 ﻿## Note : 
-## Bahasa :
+## Bahasa : Ukraina
 
 # SETTINGS
 neko.graphics=Графіка
@@ -10,3 +10,13 @@ neko.title_gameplay=Налаштування ігрового процесу
 
 neko.about=Про
 neko.title_about=Про
+
+# PLAY SCREEN
+neko.button.createworld = Створіть новий світ
+neko.createworld.desc = Досліджуйте нові світи!
+
+neko.button.importbutton = Світовий імпорт
+neko.importworld.desc = Імпортувати світ зі сховища
+
+neko.button.addserver = Додати сервер
+neko.addserver.desc = Додати власний сервер

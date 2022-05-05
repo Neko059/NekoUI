@@ -1,5 +1,5 @@
 ﻿## Note : 
-## Bahasa :
+## Bahasa : Belanda
 
 # SETTINGS
 neko.graphics=Grafische afbeeldingen
@@ -10,3 +10,13 @@ neko.title_gameplay=Gameplay-instellingen
 
 neko.about=Wat betreft
 neko.title_about=Wat betreft
+
+# PLAY SCREEN
+neko.button.createworld = Creëer een nieuwe wereld
+neko.createworld.desc = Ontdek nieuwe werelden!
+
+neko.button.importbutton = Wereld import
+neko.importworld.desc = Wereld importeren vanuit opslag
+
+neko.button.addserver = Server toevoegen
+neko.addserver.desc = Aangepaste server toevoegen

@@ -265,8 +265,10 @@
     "size": [ "100%", 28 ]
   },
 
+  /// Main Buttons
+
   "return_to_game_button@x_button.pause_button_template": {
-    "$glyph_texture": "textures/ui-x/icon-new/pause/play_color",
+    "$glyph_texture": "textures/neko/main_icon/pause_return",
     "$pressed_button_name": "button.menu_continue",
     "$button_text": "menu.returnToGame",
     "anchor_to": "top_middle",
@@ -276,26 +278,36 @@
     "$focus_override_right": "change_skin_button"
   },
 
-
   "store_button@x_button.pause_button_template": {
-    "$glyph_texture": "textures/ui-x/icon-new/pause/store_icon",
+    "$glyph_texture": "textures/neko/main_icon/pause_store",
     "$pressed_button_name": "button.menu_store",
-    "$button_text": "$store_button_text",
-    "bindings": [
-      {
-        "binding_name": "#store_button_visible",
-        "binding_name_override": "#enabled"
-      }
-    ]
+    "$button_text": "$store_button_text"
   },
 
   "settings_button@x_button.pause_button_template": {
-    "$glyph_texture": "textures/ui-x/icon-new/pause/settings_icon",
+    "$glyph_texture": "textures/neko/main_icon/pause_settings",
     "$pressed_button_name": "button.menu_settings",
     "$button_text": "menu.settings",
     "anchor_to": "top_middle",
     "anchor_from": "top_middle",
     "$focus_override_right": "change_skin_button"
+  },
+
+  "quit_button@x_button.pause_button_template": {
+    "$glyph_texture": "textures/neko/main_icon/pause_exit",
+
+    "$pressed_button_name": "button.menu_quit",
+    "$button_text": "pauseScreen.quit",
+    "anchor_to": "top_middle",
+    "anchor_from": "top_middle",
+    "focus_change_down": "button.feedback",
+    "$focus_override_right": "change_skin_button",
+    "variables": [
+      {
+        "requires": "$is_secondary_client",
+        "$button_text": "pauseScreen.secondaryClientLeave"
+      }
+    ]
   },
 
   "how_to_play_button@x_button.pause_button_template": {
@@ -336,23 +348,6 @@
         "binding_name": "#is_trial_version",
         "binding_name_override": "#visible",
         "binding_type": "global"
-      }
-    ]
-  },
-
-  "quit_button@x_button.pause_button_template": {
-    "$glyph_texture": "textures/ui-x/icon-new/pause/exit_icon",
-
-    "$pressed_button_name": "button.menu_quit",
-    "$button_text": "pauseScreen.quit",
-    "anchor_to": "top_middle",
-    "anchor_from": "top_middle",
-    "focus_change_down": "button.feedback",
-    "$focus_override_right": "change_skin_button",
-    "variables": [
-      {
-        "requires": "$is_secondary_client",
-        "$button_text": "pauseScreen.secondaryClientLeave"
       }
     ]
   },
@@ -496,7 +491,9 @@
     ]
   },
 
-  "panel_bawah@neko_c.bg_3": {
+  "panel_bawah": {
+    "type": "panel",
+    "offset": [ 0 ,"-2.5%" ],
     "anchor_to": "bottom_middle",
     "anchor_from": "bottom_middle",
     "size": [ "100%", "27px" ],
@@ -509,8 +506,8 @@
           "controls": [
             { "spacer_left": { "type": "panel", "size": [ "30%", "100%" ]}},
             { "profile_button_pause@rem.panel_icon_2": {"controls":[{ "profile_button_pause@x_button.profile_button_pause": {}}]}},
-            { "achievements_button@rem.panel_icon_2": {"bindings": [{ "binding_name": "#store_button_visibles", "binding_name_override": "#enabled" }], "controls":[{ "achievements_button@x_button.achievements_button": {}}]}},
-            { "screen_shot_pause@rem.panel_icon_2": { "controls":[{ "screen_shot_pause@x_button.screen_shot_pause": {}}]}},
+            { "achievements_button@rem.panel_icon_2": {"bindings": [{ "binding_name": "#store_button_visibles", "binding_name_override": "#enabled" }], "controls":[{ "achievements_button_pause@x_button.achievements_button_pause": {}}]}},
+            { "screen_shot_pause@rem.panel_icon_2": { "controls":[{ "screenshot_pause@x_button.screenshot_pause": {}}]}},
             { "spacer_right": { "type": "panel", "size": [ "30%", "100%" ]}}
           ]
         }
@@ -540,9 +537,9 @@
           "controls": [
             { "spacer_left": { "type": "panel", "size": [ "20%", "100%" ]}},
             { "settings_button@pause.button_panel": { "controls": [{ "settings_button@pause.settings_button": {}}]}},
-            { "store_button@pause.button_panel": { "controls": [{ "store_button@pause.store_button": {}}]}},
             { "return_to_game_button@pause.button_panel": { "controls": [{ "return_to_game_button@pause.return_to_game_button": {}}]}},
-            { "quit_button@pause.button_panel": { "controls": [{ "quit_button@pause.quit_button": {}}]}},
+            { "store_button@pause.button_panel": { "controls": [{ "store_button@pause.store_button": {}}]}},
+            { "quit_button@pause.button_panel": { "ignored": "#using_touch", "controls": [{ "quit_button@pause.quit_button": {}}]}},
             { "spacer_right": { "type": "panel", "size": [ "20%", "100%" ]}}
           ]
         }

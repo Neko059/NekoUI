@@ -140,7 +140,7 @@
           "type": "label",
           "text_alignment": "center",
           "font_type": "AGENCYB", //default "OldSmoothFont",
-          "font_scale_factor": 1.4,
+          "font_scale_factor": 1.25,
           "anchor_from": "center",
           "anchor_to": "center",
           "size": [ "97% - 25px", "default" ],
@@ -160,7 +160,7 @@
     "$glyph_offset": [ 0 , 0 ],
     "$glyph_anchor_from": "middle",
     "$glyph_anchor_to": "middle",
-    "$button_label_offset": [ 0, -10 ],
+    "$button_label_offset": [ 0, -7 ],
     "$button_label_anchor_from": "bottom_middle",
     "$button_label_anchor_to": "bottom_middle",
     "layer": 5,
@@ -182,7 +182,7 @@
             },
             {
               "requires": "$hover_state",
-              "$warna_glyph": [ 1.0, 1.0, 1.0 ]
+              "$warna_glyph": [ 0.81, 0.98, 1.00 ]
             }
           ],
           "alpha": "$content_alpha",
@@ -197,10 +197,10 @@
           "font_type": "MinecraftTen",
           "anchor_from": "$button_label_anchor_from",
           "anchor_to": "$button_label_anchor_to",
-          "font_scale_factor": 0.5,
+          "font_scale_factor": 0.75,
           "text_alignment": "center",
           "size": [ "100% - 25px", "default" ],
-          "max_size": [ "100% - 25px", "100% - 4px" ],
+          "max_size": [ "100% - 25px", "15px" ],
           "offset": "$button_label_offset",
           "text": "$button_text",
           "layer": 5,

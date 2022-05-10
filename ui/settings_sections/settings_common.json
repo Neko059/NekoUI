@@ -298,7 +298,7 @@
     "anchor_to": "middle",
     "$default_border_visible": false,
     "$hover_border_visible": false,
-    "size": [ "100%", "30px" ],
+    "size": [ "100%", "27px" ],
     "$button_size_override": [ "100%", "100% + 1px" ],
     "$button_type_panel": "settings_common.toggle_button_control",
 

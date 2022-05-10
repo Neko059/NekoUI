@@ -163,27 +163,13 @@
     ///                                           ///
     /////////////////////////////////////////////////
 
-    "bg_profile_name": {
-      "type": "image",
-      "texture": "textures/neko/bg/bg_profile_name"
-    },
 
     "bg_main_screen": {
       "type": "image",
       "layer": 1,
       "fill": true,
       "bilinear": true,
-      "uv_size": [ "100%c", "100%" ],
       "texture": "textures/neko/bg/bg_main_screen"
-    },
-
-    "bg_main_screen_anim": {
-      "type": "image",
-      "layer": 5,
-      "alpha": "@anim_test.alpha_bg",
-      "texture": "textures/neko/bg/bg_pengaturan",
-      "fill": true,
-      "bilinear": true
     },
 
     "bg_settings_screen": {
@@ -198,15 +184,6 @@
       "type": "image",
       "layer": 1,
       "texture": "textures/neko/bg/bg_play_screen",
-      "bilinear": true,
-      "fill": true
-    },
-
-    "bg_play_screen_gradient": {
-      "type": "image",
-      "layer": 2,
-      "alpha":"@anim_test.alpha_bg",
-      "texture": "textures/neko/bg/bg_play_screen_gradient",
       "bilinear": true,
       "fill": true
     },
@@ -263,15 +240,15 @@
         "anchor_to": "center",
         "size": [ "100%" , "100%" ],
         "controls": [
-            { "version@neko_c.about_label_title": { "text": "v7.5.15" , "font_size": "extra_large"}},
+            { "version@neko_c.about_label_title": { "text": "v7.6.0" , "font_size": "extra_large"}},
             { "panel": { "type": "panel", "size": [ 2 , 2 ] }},
             { "version@neko_c.about_label": { "text": "NekoUI Created by Farhan"}},
             { "panel": { "type": "panel", "size": [ 2 , 2 ] }},
             { "version@neko_c.about_label": { "text": "Panorama dari : @FoxyCodeX"}},
             { "panel": { "type": "panel", "size": [ 2 , 2 ] }},
-            { "version@neko_c.about_label": { "text": "Latest Update : 04 May 2022"}},
+            { "version@neko_c.about_label": { "text": "Latest Update : 10 May 2022"}},
             { "panel": { "type": "panel", "size": [ 2 , 2 ] }},
-            { "version@neko_c.about_label": { "text": "UUID : 04 May 2022"}}
+            { "version@neko_c.about_label": { "text": "UUID : 10 May 2022"}}
         ]
     },
 

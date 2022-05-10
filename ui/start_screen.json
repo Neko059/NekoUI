@@ -17,10 +17,10 @@
 
   "skin_viewer_panel": {
     "type": "input_panel",
-    "anchor_from": "bottom_middle",
-    "anchor_to": "bottom_middle",
-    "size": [ "100%", "100% - 24px" ],
-    "offset": [ 0, -16 ],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "size": [ 165, 165 ],
+    "offset": [ 0, -6 ],
     "gesture_tracking_button": "button.turn_doll",
     "tts_ignore_count": true,
     "button_mappings": [
@@ -42,14 +42,14 @@
               "paper_doll": {
                 "type": "custom",
                 "renderer": "paper_doll_renderer",
-                "camera_tilt_degrees": 0,
-                "starting_rotation": 0,
+                "camera_tilt_degrees": -5,
+                "starting_rotation": -15,
                 "layer": 2,
-                "anchor_from": "bottom_middle",
-                "anchor_to": "bottom_middle",
+                "anchor_from": "center",
+                "anchor_to": "center",
                 "rotation": "gesture_x",
                 "size": [ "100%", "100%" ],
-                "offset": [ 0, -30 ],
+                "offset": [ 0, -20 ],
                 "animation_reset_name": "screen_animation_reset",
                 "anims": [
                   "@common.screen_exit_size_animation_push",
@@ -91,6 +91,7 @@
       }
     ]
   },
+
 
  
   //---------------------------------------------------------------------------

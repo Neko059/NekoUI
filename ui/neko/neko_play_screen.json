@@ -1,20 +1,7 @@
 {
   "namespace": "play_ui",
 
-  
-  "$warna_teks": [ 1.0 ,1.0 ,1.0] ,
-
-  "han_a": {
-    "type": "label",
-    "anchor_from": "top_left",
-    "anchor_to": "top_left",
-    "font_type": "MinecraftTen",
-    "size": [ "default", "10px" ],
-    "color": "$warna_teks",
-    "layer": 99
-  },
-
-  "toggle_button_control": {
+  "custom_button_template": {
     "type": "panel",
     "$glyph_offset|default": [ 5 , 0 ],
     "$glyph_anchor_from|default": "left_middle",
@@ -39,7 +26,7 @@
           "bindings": "$glyph_bindings"
         }
       },
-  /*    {
+      {
         "glyph_line": {
           "type": "image",
           "anchor_from": "$glyph_anchor_from",
@@ -64,14 +51,14 @@
           "$glyph_bindings|default": [],
           "bindings": "$glyph_bindings"
         }
-      }, */
+      },
       {
-        "tab_button_text": {
+        "title_button_text": {
           "type": "label",
           "font_type": "MinecraftTen",
           "anchor_from": "top_left",
           "anchor_to": "top_left",
-          "font_scale_factor": 1.1,
+          "font_scale_factor": 0.85,
           "text_alignment": "left",
           "size": [ "100% - 25px", "default" ],
           "max_size": [ "100% - 25px", "15px" ],
@@ -97,12 +84,12 @@
         }
       },
       {
-        "desc_label": {
+        "description_button_text": {
           "type": "label",
           "font_type": "smooth",
           "anchor_from": "top_left",
           "anchor_to": "top_left",
-          "font_scale_factor": 0.9,
+          "font_scale_factor": 0.78,
           "text_alignment": "left",
           "size": [ "100% - 25px", "default" ],
           "max_size": [ "100% - 25px", "30px" ],
@@ -185,7 +172,7 @@
 },
 
 "custom_button@common_buttons.light_text_button": {
-  "$button_type_panel": "play_ui.toggle_button_control",
+  "$button_type_panel": "play_ui.custom_button_template",
   "$default_button_texture|default": "",
   "$hover_button_texture|default": "textures/neko/main_ui_button/lighthover",
   "$pressed_button_texture|default": "",
@@ -204,7 +191,7 @@
 
 "create_new_world_button@play_ui.custom_button": {
   "$glyph_texture": "textures/neko/main_icon/worldsIcon",
-  "$desc_button_text": "Explore The New Worls",
+  "$glyph_line_color": "textures/neko/main_icon/worldsIcon_color_line",
   "variables": [
     {
       "requires": "($local_world_upload)",
@@ -215,7 +202,8 @@
       "$pressed_button_name": "button.menu_local_world_create"
     }
   ],
-  "$button_text": "Create Worlds",
+  "$button_text": "Create New world",
+  "$desc_button_text": "Explore The New Worls",
   "$button_focus_precedence": 10,
   "$create_new_row_focus_override_up|default": "close_button",
   "$focus_override_up": "$create_new_row_focus_override_up",
@@ -224,7 +212,8 @@
 
 "import_world_button@play_ui.custom_button": {
   "$glyph_texture": "textures/neko/main_icon/import_world",
-  "$desc_button_text": "Import World from External Storage",
+  "$glyph_line_color": "textures/neko/main_icon/import_world_color_line",
+  "$desc_button_text": "Import a world from External Storage",
   "$button_text": "Import World",
   "variables": [
     {
@@ -246,7 +235,8 @@
   "anchor_to": "center",
   "size": [ "100% - 5px" , "100%" ],
   "$glyph_texture": "textures/neko/main_icon/add_server",
-  "$button_text": "Add Server",
+  "$glyph_line_color": "textures/neko/main_icon/add_server_color_line",
+  "$button_text": "Add Servers",
   "$desc_button_text": "Add Custom Servers",
 
   //Warna
@@ -258,7 +248,7 @@
 
   //Glyph
   "$glyph_size": [ 20, 20 ],
-  "$button_type_panel": "play_ui.toggle_button_control",
+  "$button_type_panel": "play_ui.custom_button_template",
   
   "$light_glyph_toggle_default_color": [ 1.0, 1.0, 1.0 ],
   "$light_glyph_toggle_hover_color": [ 1.0, 1.0, 1.0 ],
@@ -294,14 +284,14 @@
   "dialog_title_label": {
     "type": "label",
     "font_type": "MinecraftTen",
-    "font_scale_factor": 1.3,
+    "font_scale_factor": 1,
     "offset": [ 7, 0 ],
     "layer": 1000, 
     "color": "white",
     "anchor_from": "left_middle",
     "anchor_to": "left_middle",
     "text_alignment": "middle_left",
-    "text": "PLAY"
+    "text": "Play"
   },
 
   "dialog_titles": {

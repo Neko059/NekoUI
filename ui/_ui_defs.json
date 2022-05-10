@@ -6,7 +6,7 @@
 
     "ui/neko/neko_c.json",
     "ui/neko/neko_main_screen.json",
-    "ui/neko/neko_nametag.json",
+    "ui/neko/neko_ingfo.json",
     "ui/neko/neko_anim.json",
 
     // Pengaturan

@@ -76,8 +76,8 @@
   },
 
   "gamertag_panel@neko_c.bg_3": {
-    "size": [ 120 , 27 ],
-    "offset": [ 55 , 5 ],
+    "size": [ 80 , 27 ],
+    "offset": [ 5 , 5 ],
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "alpha": 0.75,

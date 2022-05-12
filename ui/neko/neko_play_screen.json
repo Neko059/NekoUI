@@ -43,7 +43,7 @@
             },
             {
               "requires": "$hover_state",
-              "$warna_ikon": [ 1.0, 1.0, 1.0 ]
+              "$warna_ikon": [ 0.33, 0.33, 0.33 ]
             }
           ],
           "alpha": "$content_alpha",
@@ -284,10 +284,10 @@
   "dialog_title_label": {
     "type": "label",
     "font_type": "MinecraftTen",
-    "font_scale_factor": 1,
+    "font_scale_factor": 1.5,
     "offset": [ 7, 0 ],
     "layer": 1000, 
-    "color": "white",
+    "color": "black",
     "anchor_from": "left_middle",
     "anchor_to": "left_middle",
     "text_alignment": "middle_left",
@@ -305,7 +305,7 @@
       {
         "left_padding": {
           "type": "panel",
-          "size": [ 18, "100%" ]
+          "size": [ 23, "100%" ]
         }
       },
       {
@@ -324,7 +324,7 @@
     ]
   },
 
-  "tap_panel_and_back@neko_c.bg_2": {
+  "tap_panel_and_back@neko_c.bg_3": {
     "layer": 10,
     "alpha" : 1,
     "size": [ "100%" , 27 ],
@@ -371,7 +371,7 @@
     "size": [ "fill" , "100%" ]
   },  
 
-  "stack_tab_2@neko_c.bg_2": {
+  "stack_tab_2@neko_c.bg_3": {
   "alpha": 1,
   "layer": 12,
   "offset": [ 0 , 0 ],

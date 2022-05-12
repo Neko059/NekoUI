@@ -63,7 +63,7 @@
     "$glyph_offset": [ 4 , 0 ],
     "$glyph_anchor_from": "left_middle",
     "$glyph_anchor_to": "left_middle",
-    "$button_label_offset": [ 10 , -0.1 ],
+    "$button_label_offset": [ 27 , -0.1 ],
     "layer": 5,
     "controls": [
       {
@@ -74,18 +74,8 @@
           "offset": "$glyph_offset",
           "texture": "$glyph_texture",
           "size": "$glyph_size",
-          "layer": 5,
-          "color": "$warna_ikon",
-          "variables": [
-            {
-              "requires": "$default_state",
-              "$warna_ikon": [ 1.0, 1.0, 1.0 ]
-            },
-            {
-              "requires": "$hover_state",
-              "$warna_ikon": [ 1.0, 1.0, 1.0 ]
-            }
-          ],
+          "layer": 6,
+          "color": "$glyph_color",
           "alpha": "$content_alpha",
 
           "$glyph_bindings|default": [],
@@ -96,17 +86,17 @@
         "tab_button_text": {
           "type": "label",
           "font_type": "MinecraftTen",
-          "anchor_from": "middle",
-          "anchor_to": "middle",
-          "font_scale_factor": 0.65,
-          "text_alignment": "center",
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "font_scale_factor": 0.77,
+          "text_alignment": "left",
           "size": [ "100% - 25px", "default" ],
-          "max_size": [ "100% - 25px", "10px" ],
-          "offset": "$button_label_offset",
+          "max_size": [ "100% - 25px", "15px" ],
+          "offset": [ 25 , -0.1 ],
           "text": "$button_text",
-          "layer": 5,
+          "layer": 3,
           "color": "$text_color",
-          "alpha": "$content_alpha",
+          "alpha": "$han_alpha",
 
           "$button_text_binding_type|default": "none",
           "$button_text_grid_collection_name|default": "",

@@ -491,6 +491,12 @@
     ]
   },
 
+  "panel_icon_2": {
+    "type": "panel",
+    "size": "$han_size",
+    "$han_size|default": [ "fill" , "100%"]
+  },
+
   "panel_bawah": {
     "type": "panel",
     "offset": [ 0 ,"-2.5%" ],
@@ -505,9 +511,9 @@
           "orientation": "horizontal",
           "controls": [
             { "spacer_left": { "type": "panel", "size": [ "30%", "100%" ]}},
-            { "profile_button_pause@rem.panel_icon_2": {"controls":[{ "profile_button_pause@x_button.profile_button_pause": {}}]}},
-            { "achievements_button@rem.panel_icon_2": {"bindings": [{ "binding_name": "#store_button_visibles", "binding_name_override": "#enabled" }], "controls":[{ "achievements_button_pause@x_button.achievements_button_pause": {}}]}},
-            { "screen_shot_pause@rem.panel_icon_2": { "controls":[{ "screenshot_pause@x_button.screenshot_pause": {}}]}},
+            { "profile_button_pause@pause.panel_icon_2": {"controls":[{ "profile_button_pause@x_button.profile_button_pause": {}}]}},
+            { "achievements_button@pause.panel_icon_2": {"bindings": [{ "binding_name": "#store_button_visibles", "binding_name_override": "#enabled" }], "controls":[{ "achievements_button_pause@x_button.achievements_button_pause": {}}]}},
+            { "screen_shot_pause@pause.panel_icon_2": { "controls":[{ "screenshot_pause@x_button.screenshot_pause": {}}]}},
             { "spacer_right": { "type": "panel", "size": [ "30%", "100%" ]}}
           ]
         }

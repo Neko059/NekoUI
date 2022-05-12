@@ -4,10 +4,10 @@
 
     // Hehe custom cuk :v
     
-    "$warna_default": [ 1.0, 1.0, 1.0 ],
-    "$warna_dihover": [ 0.81, 0.98, 1.00 ],
-    "$warna_ditekan": [ 1.00, 0.00, 0.43 ],
-    "$warna_ditekan_dan_hover": [ 0.33, 0.33, 0.33 ],
+    "$warna_default": [ 0.0, 0.0, 0.0 ],
+    "$warna_dihover": [ 1.00, 0.00, 0.43 ],
+    "$warna_ditekan": [ 0.26, 0.27, 0.28 ],
+    "$warna_ditekan_dan_hover": [ 1.00, 0.16, 0.54 ],
     "$dikunci": [ 1.00, 0.11, 0.11 ],
 
 
@@ -49,23 +49,23 @@
     "$main_header_text_color": [ 1.0, 1.0, 1.0 ],
     "$sub_header_text_color": [ 1.0, 1.0, 1.0 ],
   
-    "$tab_unchecked_text_color": [ 1.0, 1.0, 1.0 ],
-    "$tab_unchecked_hover_text_color": [ 0.00, 0.82, 0.92 ],
+    "$tab_unchecked_text_color": [ 0.0, 0.0, 0.0 ],
+    "$tab_unchecked_hover_text_color": [ 1.00, 0.00, 0.43 ],
     "$tab_unchecked_locked_text_color": [ 1.00, 0.26, 0.26 ],
     "$tab_unchecked_locked_hover_text_color": [ 1.00, 0.26, 0.26 ],
-    "$tab_checked_text_color": [ 0.00, 0.82, 0.92 ],
-    "$tab_checked_hover_text_color": [ 1.00, 0.00, 0.43 ],
+    "$tab_checked_text_color": [ 0.38, 0.63, 1.00 ],
+    "$tab_checked_hover_text_color": [ 1.00, 0.16, 0.54 ],
     "$tab_checked_locked_text_color": [ 1.00, 0.26, 0.26 ],
     "$tab_checked_locked_hover_text_color": [ 1.00, 0.26, 0.26 ],
   
-    "$tab_secondary_unchecked_text_color": [ 1.0, 1.0, 1.0 ],
-    "$tab_secondary_unchecked_hover_text_color": [ 1.0, 1.0, 1.0 ],
-    "$tab_secondary_unchecked_locked_text_color": [ 1.0, 1.0, 1.0 ],
-    "$tab_secondary_unchecked_locked_hover_text_color": [ 1.0, 1.0, 1.0 ],
-    "$tab_secondary_checked_text_color": [ 1.0, 1.0, 1.0 ],
-    "$tab_secondary_checked_hover_text_color": [ 1.0, 1.0, 1.0 ],
-    "$tab_secondary_checked_locked_text_color": [ 1.0, 1.0, 1.0 ],
-    "$tab_secondary_checked_locked_hover_text_color": [ 1.0, 1.0, 1.0 ],
+    "$tab_secondary_unchecked_text_color": [ 0.0, 0.0, 0.0 ],
+    "$tab_secondary_unchecked_hover_text_color": [ 0.00, 0.82, 0.92 ],
+    "$tab_secondary_unchecked_locked_text_color": [ 1.00, 0.26, 0.26 ],
+    "$tab_secondary_unchecked_locked_hover_text_color": [ 1.00, 0.26, 0.26 ],
+    "$tab_secondary_checked_text_color": [ 0.00, 0.82, 0.92 ],
+    "$tab_secondary_checked_hover_text_color": [ 11.00, 0.00, 0.43 ],
+    "$tab_secondary_checked_locked_text_color": [ 1.00, 0.26, 0.26 ],
+    "$tab_secondary_checked_locked_hover_text_color": [ 1.00, 0.26, 0.26 ],
   
     "$tab_unchecked_glyph_color": [ 0.3, 0.3, 0.3 ],
     "$tab_unchecked_hover_glyph_color": [ 0.3, 0.3, 0.3 ],

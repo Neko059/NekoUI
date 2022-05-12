@@ -16,7 +16,6 @@
     // Play_screen
     "ui/neko/neko_play_screen.json",
     "ui/neko/neko_template_tabs.json",
-
     "ui/neko/button_panel.json",
     "ui/neko/button.json"
   ]

@@ -134,7 +134,7 @@
 
   "button_and_icons": {
     "type": "panel",
-    "layer": 100,
+    "layer": 5,
     "anchor_from": "center",
     "anchor_to": "center",
     "offset": [ 7 , 0 ], // X Y

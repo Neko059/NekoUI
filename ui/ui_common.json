@@ -53,13 +53,13 @@
             {
               "title_stack_panel": {
                 "type": "stack_panel",
-                "size": [ "100%", 19 ],
+                "size": [ "100%", 27 ],
                 "orientation": "horizontal",
                 "controls": [
                   {
                     "padding1": {
                       "type": "panel",
-                      "size": [ 2, "100%" ]
+                      "size": [ 1.5, "100%" ]
                     }
                   },
                   { "back_button_content_panel@common.back_content_panel": {} },
@@ -138,7 +138,7 @@
     "type": "stack_panel",
     "orientation": "horizontal",
     "size": [ "100%c", 27 ],
-    "offset": [ 0, 2 ],
+    "offset": [ 0, 0 ],
     "controls": [
       {
         "padding1": {
@@ -154,7 +154,7 @@
             {
               "left_chevron@common.chevron_image": {
                 "texture": "textures/neko/chevron_left",
-                "offset": [ 2.5, 2.7 ]
+                "offset": [ 0, 2 ]
               }
             }
           ]
@@ -221,7 +221,7 @@
         "panel1": {
           "type": "panel",
           "offset": [ 2, 0 ],
-          "size": [ 16, "100%" ],
+          "size": [ 27, "100%" ],
           "controls": [
             {
               "button@common.back_button": {
@@ -277,7 +277,7 @@
     "controls": [
       {
         "back_button@common.back_title_button": {
-          "offset": [ 0, -1 ],
+          "offset": [ 0, 0 ],
           "layer": 200 //This should always be on top, let's ensure that
         }
       }

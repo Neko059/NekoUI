@@ -1,5 +1,10 @@
 {
-  "nineslice_size": 1,
+  "nineslice_size": [
+    2,
+    2,
+    2,
+    3
+  ],
   "base_size": [
     16,
     16

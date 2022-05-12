@@ -454,45 +454,11 @@
     ]
   },
 
-  "progress_screen_text_2": {
-    "type": "label",
-    "font_type": "smooth",
-    "text_alignment": "center",
-    "color": "$loading_text_color",
-    "anchor_to": "center",
-    "anchor_from": "center",
-    "layer": 2,
-    "shadow": false
-  },
-
-  "progress_title_text_2@progress.progress_screen_text_2": {
-    "font_scale_factor": 1.1,
-    "size": [ "default", "default" ],
-    "max_size": [ "100% - 8px", 50 ],
-    "offset": [ 0, -15 ],
-    "text": "#title_text",
-    "bindings": [
-      {
-        "binding_name": "#title_text"
-      }
-    ]
-  },
-
-  "progress_bar_text_2@progress.progress_screen_text_2": {
-    "font_scale_factor": 0.8,
-    "size": [ "default", 20 ],
-    "max_size": [ "100% - 8px", 20 ],
-    "offset": [ 0, 9 ],
-    "text": "#progress_text",
-    "bindings": [
-      { "binding_name": "#progress_text" }
-    ]
-  },
-
-
   "world_modal_progress_panel_2": {
+  "anchor_from": "bottom_left",
+  "anchor_to": "bottom_left",
   "type": "panel",
-  "size": [ "100%" , "100%" ],
+  "size": [ "100%" , "50px" ],
   "variables": [
       {
         "requires": "$desktop_screen",
@@ -508,6 +474,53 @@
       }
     ],
     "controls": [
+      {
+        "base_content": {
+          "type": "panel",
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          // magic offset to make the scroll clipping perfect
+          "size": [ "100%-12px", "100%" ],
+
+          "controls": [
+            {
+              "label_panel": {
+                "type": "panel",
+                "size": [ "100% - 90px", 40 ],
+                "controls": [
+                  {
+                    "label_stack_panel": {
+                      "type": "stack_panel",
+                      "orientation": "vertical",
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "size": [ "100%", "100%c" ],
+                      "controls": [
+                        {
+                          "progress_title_text@progress.progress_title_text": {
+                            "size": [ "default", 10 ],
+                            "max_size": [ "100% - 8px", 10 ],
+                            "color": "$title_text_color",
+                            "anchor_from": "top_left",
+                            "anchor_to": "top_left"
+                          }
+                        },
+                        {
+                          "progress_bar_text@progress.progress_bar_text": { // KATA - KATA MUTIARA
+                            "anchor_from": "top_left",
+                            "anchor_to": "top_left",
+                            "size": [ 150, 40 ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
       {
         "inside_content": {
           "type": "stack_panel",
@@ -544,8 +557,8 @@
             },
             {
               "modal_button_panel@progress.modal_button_panel": {
-                "anchor_from": "bottom_right",
-                "anchor_to": "bottom_right",
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
                 "size": [ "100%", "100%c" ],
                 "bindings": [
                   {
@@ -567,52 +580,6 @@
     ]
   },
 
-  "custom_loading_screen@neko_c.bg_3": {
-    "anchor_from": "left_middle",
-    "anchor_to": "left_middle",
-    "offset": [ 65 , 0 ],
-    "size": [ "25%", "100% - 130px" ],
-    "controls": [
-      {
-        "label_stack_panel": {
-          "type": "stack_panel",
-          "orientation": "vertical",
-          "size": [ "100%", "100%c" ],
-          "controls": [
-            {
-              "panel_untuk_animasi_loading": {
-                "type": "panel",
-                "size": [ "100%", 50 ],
-                "controls": [
-                  {
-                    "loading_spin@progress.loading_spin": { "anchor_from": "center", "anchor_to": "center", "size": [ 24 , 24 ]}
-                  }
-                ]
-              }
-            },
-            {
-              "progress_title_text@progress.progress_title_text_2": {
-                "size": [ "100%", 15 ],
-                "max_size": [ "100% - 8px", 18 ],
-                "color": [ 0.0, 0.0, 0.0 ],
-                "anchor_from": "top_left",
-                "anchor_to": "top_left"
-              }
-            },
-            {
-              "progress_bar_text@progress.progress_bar_text_2": { // KATA - KATA MUTIARA
-                "color": [ 0.0, 0.0, 0.0 ],
-                "anchor_from": "top_left",
-                "anchor_to": "top_left",
-                "size": [ "100% - 8px" , 40 ]
-              }
-            }
-          ]
-        }
-      }
-    ]
-  },
-
   "world_convert_modal_progress_screen_content": {
     "type": "panel",
 
@@ -620,7 +587,7 @@
 
     "controls": [
       {
-        "title_panel_content@common_art.start_title_paneld_content": {
+        "title_panel_content@common_art.start_title_panel_content": {
           "$splash_text_visible": false,
           "layer": 3,
           "size": [ "90%" , 100 ],
@@ -630,15 +597,16 @@
         }
       },
       {
-        "bg@neko_c.bg_main_screen": {
-          "layer": 1
+        "bg@neko_c.bg_2": {
+          "layer": 1,
+          "fill": true
         }
       },
       {
-        "custom_loading_screen@progress.custom_loading_screen": {}
+        "world_modal_progress_panel_2@progress.world_modal_progress_panel_2": {}
       },
       {
-        "world_modal_progress_panel_2@progress.world_modal_progress_panel_2": {}
+        "loading_spin@progress.loading_spin": { "anchor_from": "bottom_left", "anchor_to": "bottom_left", "offset": [ 10 , -25 ], "size": [ 24 , 24 ]}
       },
       { "popup_dialog_factory@progress.popup_dialog_factory": {} }
     ]
@@ -648,7 +616,7 @@
     "type": "panel",
     "controls": [
       {
-        "title_panel_content@common_art.start_titled_panel_content": {
+        "title_panel_content@common_art.start_title_panel_content": {
           "$splash_text_visible": false,
           "layer": 3,
           "size": [ "90%" , 100 ],
@@ -662,9 +630,6 @@
           "fill": true,
           "layer": 1
         }
-      },
-      {
-        "custom_loading_screen@progress.custom_loading_screen": {}
       },
       {
         "world_modal_progress_panel_2@progress.world_modal_progress_panel_2": {}

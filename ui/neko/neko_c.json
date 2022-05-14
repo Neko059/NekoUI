@@ -246,7 +246,7 @@
             { "panel": { "type": "panel", "size": [ 2 , 2 ] }},
             { "version@neko_c.about_label": { "text": "Panorama dari : @FoxyCodeX"}},
             { "panel": { "type": "panel", "size": [ 2 , 2 ] }},
-            { "version@neko_c.about_label": { "text": "Latest Update : 12 May 2022"}},
+            { "version@neko_c.about_label": { "text": "Latest Update : 13 May 2022"}},
             { "panel": { "type": "panel", "size": [ 2 , 2 ] }},
             { "version@neko_c.about_label": { "text": "UUID : 12 May 2022"}}
         ]

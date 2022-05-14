@@ -43,7 +43,7 @@
             },
             {
               "requires": "$hover_state",
-              "$warna_ikon": [ 0.33, 0.33, 0.33 ]
+              "$warna_ikon": [ 1.0, 1.0, 1.0 ]
             }
           ],
           "alpha": "$content_alpha",
@@ -123,7 +123,7 @@
   },
   
   "top_tab@custom_tabs.tab_top": {
-  "size": [ "100% - 3px" , "100% - 3px" ],
+  "size": [ "100% - 3px" , "100%" ],
   "$toggle_tts_enabled_binding_type": "global",
   "$radio_toggle_group": true,
   "$toggle_name": "navigation_tab",
@@ -179,7 +179,7 @@
   "anchor_from": "center",
   "anchor_to": "center",
   "$border_visible": false,
-  "size": [ "100% - 5px" , "100%" ],
+  "size": [ "100% - 2px" , "100%" ],
   "$glyph_size": [ 20, 20 ],
 
 // Warna Teks
@@ -246,7 +246,7 @@
 "create_server_button@common_toggles.light_content_toggle": {
   "anchor_from": "center",
   "anchor_to": "center",
-  "size": [ "100% - 5px" , "100%" ],
+  "size": [ "100% - 2px" , "100%" ],
   "$glyph_texture": "textures/neko/main_icon/add_server",
   "$glyph_line_color": "textures/neko/main_icon/add_server_color_line",
   "$button_text": "Add Servers",
@@ -299,8 +299,8 @@
     "font_type": "MinecraftTen",
     "font_scale_factor": 1.2,
     "offset": [ 7, 0 ],
-    "layer": 1000, 
-    "color": "black",
+    "layer": 10, 
+    "color": "white",
     "anchor_from": "left_middle",
     "anchor_to": "left_middle",
     "text_alignment": "middle_left",
@@ -337,7 +337,7 @@
     ]
   },
 
-  "tap_panel_and_back@neko_c.bg_3": {
+  "tap_panel_and_back@neko_c.bg_2": {
     "layer": 10,
     "alpha" : 1,
     "size": [ "100%" , 27 ],
@@ -384,7 +384,7 @@
     "size": [ "fill" , "100%" ]
   },  
 
-  "stack_tab_2@neko_c.bg_3": {
+  "stack_tab_2@neko_c.bg_2": {
   "alpha": 1,
   "layer": 12,
   "offset": [ 0 , 0 ],

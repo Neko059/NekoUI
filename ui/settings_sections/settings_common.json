@@ -40,11 +40,11 @@
 
   "option_slider_control": {
     "type": "panel",
-    "size": [ "100% - 2px", 23 ],
+    "size": [ "100% - 10px", 18 ],
     "controls": [
       {
         "slider@common.slider": {
-          "size": [ "100%-3px", 20 ],
+          "size": [ "100%-10px", 18 ],
           "$slider_box_size": [ 10, 16 ],
           "offset": [ 1, 0 ],
 
@@ -223,6 +223,7 @@
           "layer": 3,
           "color": "$glyph_color",
           "alpha": "$content_alpha",
+          "bilinear": true,
 
           "$glyph_bindings|default": [],
           "bindings": "$glyph_bindings"
@@ -259,8 +260,8 @@
       {
         "tab_button_text": {
           "type": "label",
-          "font_type": "MinecraftTen",
-          "font_scale_factor": 0.8,
+          "font_type": "smooth",
+          "font_scale_factor": 0.85,
           "anchor_from": "left_middle",
           "anchor_to": "left_middle",
           "size": [ "100% - 38px", "default" ],
@@ -290,7 +291,11 @@
   },
 
   "section_toggle_base@common_toggles.light_ui_toggle": {
-    "$default_texture": "textures/neko/borderless/button_borderless_light",
+    "$light_toggle_default_text_color": [ 1.0, 1.0, 1.0 ],
+    "$light_toggle_hover_text_color": [ 1.0, 1.0, 1.0 ],
+    "$light_toggle_checked_default_text_color": [ 0.0, 0.0, 0.0 ],
+    "$light_toggle_checked_hover_text_color": [ 0.0, 0.0, 0.0 ],
+    "$default_texture": "",
     "$hover_texture": "textures/neko/borderless/button_borderless_lighthover",
     "$pressed_texture": "textures/neko/borderless/button_borderless_lightpressed",
     "$pressed_no_hover_texture": "textures/neko/borderless/button_borderless_lightpressednohover",
@@ -298,7 +303,7 @@
     "anchor_to": "middle",
     "$default_border_visible": false,
     "$hover_border_visible": false,
-    "size": [ "100%", "27px" ],
+    "size": [ "100%", "32px" ],
     "$button_size_override": [ "100%", "100% + 1px" ],
     "$button_type_panel": "settings_common.toggle_button_control",
 

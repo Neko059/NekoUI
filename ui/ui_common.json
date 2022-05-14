@@ -59,7 +59,7 @@
                   {
                     "padding1": {
                       "type": "panel",
-                      "size": [ 1.5, "100%" ]
+                      "size": [ 0, "100%" ]
                     }
                   },
                   { "back_button_content_panel@common.back_content_panel": {} },
@@ -106,7 +106,7 @@
             {
               "left_chevron@common.chevron_image": {
                 "texture": "textures/neko/chevron_left",
-                "offset": [ 2.5, 2.7 ]
+                "offset": [ 2.5, 2.5 ]
               }
             }
           ]
@@ -154,7 +154,7 @@
             {
               "left_chevron@common.chevron_image": {
                 "texture": "textures/neko/chevron_left",
-                "offset": [ 0, 2 ]
+                "offset": [ 0, 2.5 ]
               }
             }
           ]

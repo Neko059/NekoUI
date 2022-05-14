@@ -75,7 +75,17 @@
           "texture": "$glyph_texture",
           "size": "$glyph_size",
           "layer": 6,
-          "color": "$glyph_color",
+          "color": "$warna_icon",
+          "variables": [
+            {
+              "requires": "$default_state",
+              "$warna_icon": "$warna_icon_default"
+            },
+            {
+              "requires": "$hover_state",
+              "$warna_icon": "$warna_icon_saatdihover"
+            }
+          ],
           "alpha": "$content_alpha",
 
           "$glyph_bindings|default": [],

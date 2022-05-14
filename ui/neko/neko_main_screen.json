@@ -203,7 +203,7 @@
     "offset": [ 5 , 32 ],
     "color": [ 0.0, 0.0, 0.0 ],
     "size": [ "default", "default" ], // x dan y
-    "text": "NEKO v7.6 BETA"
+    "text": "NEKO ( USERINTERFACE ) v7.6.1"
   },
 
   "title_panel_pocket": {

@@ -1,19 +1,6 @@
 {
   "namespace": "x_button",
 
-  "fx_realms_button@common_buttons.light_text_button": {
-    "$button_type_panel": "x_button_panel.realms_button_panel",
-    "anchor_from": "top_left",
-    "anchor_to": "top_left",
-    "$border_visible": false,
-    "size": [ "100%" , "100%" ],
-    "$glyph_size": [ 15, 15 ],
-    "$default_text_color|default": [ 1.0, 1.0, 1.0 ],
-    "$hover_text_color|default": [ 1.0, 1.0, 1.0 ],
-    "$pressed_text_color|default": [ 1.0, 1.0, 1.0 ],
-    "$locked_text_color|default": [ 0.7, 0.7, 0.7 ]
-  },
-
   "create_new_button_panel@common_buttons.new_ui_binding_button_label": {
     "layer": 10,
     "$anchor|default": "middle",
@@ -21,36 +8,6 @@
     "font_scale_factor": 1.1,
     "offset": [ 0 , -1.1 ] //  X , Y
   },
-
-  "fx_create_new_button@common_buttons.light_text_button": {
-    "$border_visible": false,
-    "$button_type_panel": "x_button.create_new_button_panel",
-    "size": [ "100%" , "100%" ],
-    "$default_text_color|default": [ 0.0, 0.0, 0.0 ],
-    "$hover_text_color|default": [ 0.81, 0.98, 1.00 ],
-    "$pressed_text_color|default": [ 1.0, 1.0, 1.0 ],
-    "$locked_text_color|default": [ 0.3, 0.3, 0.3 ],
-    "$default_button_texture|default": "textures/neko/light",
-    "$hover_button_texture|default": "textures/neko/lighthover",
-    "$pressed_button_texture|default": "textures/neko/lightpressed",
-    "$locked_button_texture|default": "textures/neko/locked"
-  },
-
-  "play_button@common_buttons.light_text_button": {
-    "size": [ "100%" , "100%" ],
-    "$default_text_color|default": [ 0.0, 0.0, 0.0 ],
-    "$hover_text_color|default": [ 0.0, 0.0, 0.0 ],
-    "$pressed_text_color|default": [ 0.0, 0.0, 0.0 ],
-    "$locked_text_color|default": [ 1.00, 0.26, 0.26 ],
-    "$button_text": "START",
-    "$texture_icon": "textures/neko/main_icon/play_icon",
-    "$ukuran_icon": [ 16 , 16 ],
-    "$button_type_panel": "x_button_panel.play_button_panel",
-    "$default_button_texture|default": "textures/neko/start_button/fxbutton_hover",
-    "$hover_button_texture|default": "textures/neko/start_button/fxbutton_pressed",
-    "$pressed_button_texture|default": "textures/neko/start_button/fxbutton_pressed",
-    "$pressed_button_name": "$play_button_target"
-  },    
 
   ///////////////////
   // FXBUTTON 2    //
@@ -129,8 +86,8 @@
     "$locked_button_texture|default": "textures/neko/main_ui_button/locked",
     
     "$default_text_color|default": [ 0.0, 0.0, 0.0 ],
-    "$hover_text_color|default": [ 0.0, 0.0, 0.0 ],
-    "$pressed_text_color|default": [ 0.0, 0.0, 0.0 ],
+    "$hover_text_color|default": [ 1.0, 1.0, 1.0 ],
+    "$pressed_text_color|default": [ 1.0, 1.0, 1.0 ],
     "$locked_text_color|default": [ 0.5, 0.5, 0.5 ],
 
     "$glyph_texture": "textures/neko/main_icon/play_icon",
@@ -161,7 +118,7 @@
     "$button_type_panel": "x_button_panel.main_screen_button",
     "$border_visible": false,
     "$default_text_color|default": [ 0.0, 0.0, 0.0 ],
-    "$hover_text_color|default": [ 0.26, 0.27, 0.28 ],
+    "$hover_text_color|default": [ 1.0, 1.0, 1.0 ],
     "$pressed_text_color|default": [ 1.00, 0.00, 0.43 ],
     "$locked_text_color|default": [ 1.00, 0.11, 0.11 ]
   },  
@@ -175,6 +132,8 @@
 
  "achievements_button@x_button.fxbutton2": {
     "$glyph_size": [ 15, 15 ],
+    "$warna_icon_saatdihover": [ 1.0, 1.0, 1.0 ],
+    "$warna_icon_default": [ 1.0, 1.0, 1.0 ],
     "$glyph_texture": "textures/neko/main_icon/achievements_icon",
     "$pressed_button_name": "button.menu_achievements",
     "$button_text": "menu.achievements"

@@ -3,15 +3,15 @@
     "header": {
         "description": "Created by : Farhan\nPertama menggunakan restart dulu game nya :3",
         "name": "§lNeko§bUI",
-        "uuid": "fcf23460-c125-4284-8ae3-6df822ad64d8",
+        "uuid": "23ece6ca-913f-4c39-bec0-21740ac57419",
         "version": [7, 6, 0],
-        "min_engine_version": [1, 18, 31]
+        "min_engine_version": [1, 18, 30]
     },
     "modules": [
         {
             "description": "Created by : Farhan\nPertama menggunakan restart dulu game nya :3",
             "type": "resources",
-            "uuid": "238458f1-8527-4792-87af-129aacfc8d57",
+            "uuid": "fcc6b264-c4f7-43eb-b071-2a5de6ad9f25",
             "version": [7, 6, 0]
         }
     ],

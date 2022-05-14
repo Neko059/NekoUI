@@ -228,6 +228,8 @@
       "type": "label",
       "size": [ "100%", "default" ],
       "text_alignment": "left",
+      "font_type": "smooth",
+      "font_scale_factor": 1.15,
       "shadow": true
     },
 

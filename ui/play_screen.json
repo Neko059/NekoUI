@@ -1433,7 +1433,7 @@
     "text": "#local_world_name",
     "localize": false,
     "font_scale_factor": 1.2,
-    "color": [ 0.0, 0.0, 0.0 ],
+    "color": [ 1.0, 1.0, 1.0 ],
     "bindings": [
       {
         "binding_name": "#local_world_name",
@@ -1683,7 +1683,7 @@
                 "controls": [
                   {
                     "local_world_name@play.local_world_name": {
-                      "size": [ "fill", 20 ],
+                      "size": [ "fill", 35 ],
                       "layer": 1
                     }
                   },

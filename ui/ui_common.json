@@ -5,7 +5,7 @@
     "type": "image",
     "alpha": "$alpha_cok",
     "layer": 999,
-    "texture": "textures/neko/StoreTopBar",
+    "texture": "textures/ui/StoreTopBar",
     "size": [ "100%", 23 ]
   },
 
@@ -106,7 +106,7 @@
             {
               "left_chevron@common.chevron_image": {
                 "texture": "textures/neko/chevron_left",
-                "offset": [ 2.5, 2.5 ]
+                "offset": [ 2.5, 2 ]
               }
             }
           ]

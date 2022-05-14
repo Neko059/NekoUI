@@ -51,7 +51,7 @@
     "$toggle_view_binding_name": "onnichan_controls_settings",
     "$glyph_texture": "textures/neko/glyph_icon/more_settings_colors",
     "$glyph_color_texture": "textures/neko/glyph_icon/more_settings_colors",
-    "$glyph_size": [ 18, 18],
+    "$glyph_size": [ 15, 15 ],
     "$button_text": "Pengaturan Control",
     "$toggle_property_bag": {
       "#panel_title": ""
@@ -131,7 +131,7 @@
     "$toggle_view_binding_name": "more_settings",
     "$glyph_texture": "textures/neko/glyph_icon/more_settings_colors",
     "$glyph_color_texture": "textures/neko/glyph_icon/more_settings_colors",
-    "$glyph_size": [ 18, 18],
+    "$glyph_size": [ 15, 15 ],
     "$button_text": "Pengaturan Lanjutan",
     "$toggle_property_bag": {
       "#panel_title": ""
@@ -285,7 +285,7 @@
     "$toggle_view_binding_name": "graphic_button_toggle",
     "$glyph_texture": "textures/neko/glyph_icon/settings_grafis",
     "$glyph_color_texture": "textures/neko/glyph_icon/settings_grafis",
-    "$glyph_size": [ 18, 18],
+    "$glyph_size": [ 15, 15 ],
     "$button_text": "neko.graphics",
     "$toggle_property_bag": {
       "#panel_title": "neko.title_graphics"
@@ -513,7 +513,7 @@
     "$toggle_view_binding_name": "gameplay_button_toggle",
     "$glyph_texture": "textures/neko/glyph_icon/controller_glyph_color",
     "$glyph_color_texture": "textures/neko/glyph_icon/controller_glyph_color",
-    "$glyph_size": [ 18, 18],
+    "$glyph_size": [ 15, 15 ],
     "$button_text": "neko.gameplay",
     "$toggle_property_bag": {
       "#panel_title": "neko.title_gameplay"
@@ -808,7 +808,7 @@
     "$toggle_view_binding_name": "about_button_toggle",
     "$glyph_texture": "textures/neko/glyph_icon/settings_about",
     "$glyph_color_texture": "textures/neko/glyph_icon/settings_aboutColor",
-    "$glyph_size": [ 18, 18],
+    "$glyph_size": [ 15, 15 ],
     "$button_text": "neko.about",
     "$toggle_property_bag": {
       "#panel_title": "neko.title_about"

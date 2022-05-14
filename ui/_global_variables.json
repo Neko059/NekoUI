@@ -10,6 +10,8 @@
     "$warna_ditekan_dan_hover": [ 1.00, 0.16, 0.54 ],
     "$dikunci": [ 1.00, 0.11, 0.11 ],
 
+    "$warna_icon_saatdihover": [ 1.0, 1.0, 1.0 ],
+    "$warna_icon_default": [ 0.0, 0.0, 0.0 ],
 
     "$generic_button_text_color": [ 1.0, 1.0, 1.0 ], // for those times you find a button that's kind of used but shouldn't...
   
@@ -19,9 +21,9 @@
     "$light_button_locked_text_color": [ 1.00, 0.26, 0.26 ],
   
     "$light_toggle_default_text_color": [ 0.0, 0.0, 0.0 ],
-    "$light_toggle_hover_text_color": [ 1.0, 1.0, 1.0 ],
+    "$light_toggle_hover_text_color": [ 0.0, 0.0, 0.0 ],
     "$light_toggle_checked_default_text_color": [ 0.0, 0.0, 0.0 ],
-    "$light_toggle_checked_hover_text_color": [ 1.0, 1.0, 1.0 ],
+    "$light_toggle_checked_hover_text_color": [ 0.0, 0.0, 0.0 ],
   
     "$dark_button_default_text_color": [ 1.0, 1.0, 1.0 ],
     "$dark_button_hover_text_color": [ 0.10, 0.55, 1.00 ],

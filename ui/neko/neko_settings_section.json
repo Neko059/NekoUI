@@ -870,11 +870,10 @@
       },
       { "created_by_title@neko_c.created_by_title": {}},
       { "created_by@neko_c.created_by": {}},
-      { "facebook_label@neko_c.fxn_label_2": { "text": "Facebook : §bHan's" }},
-      { "instagram_label@neko_c.fxn_label_2": { "text": "Instagram : §b@Yuki" }},
-      { "twitter_label@neko_c.fxn_label_2": {"text": "Twitter : §b@FarhanX" }},
+      { "instagram_label@neko_c.fxn_label_2": { "text": "Instagram : §b@handaffa91 ( Yuki )" }},
+      { "twitter_label@neko_c.fxn_label_2": {"text": "Twitter : §b@handdafa01 ( Zxyn )" }},
       { "panel": { "type": "panel", "size": [ 5 , 5 ] }},
-      { "version@neko_c.fxn_label_2": { "size": [ "100% - 20px" , "default" ], "max_size": [ "100% - 20px" , "50px" ], "text": "Dilarang memodifikasi FILE JSON NEKO UI !\nJika ingin menggunakan UI ini sebagai project kamu ,izin dulu ke dev nya :v" }}
+      { "version@neko_c.fxn_label_2": { "size": [ "100% - 20px" , "default" ], "max_size": [ "100% - 20px" , "50px" ], "text": "Dilarang memodifikasi FILE JSON NEKO UI" }}
       ]
     }
   }

@@ -1,4 +1,4 @@
-{
+ {
   "namespace": "loli",
 
   "button_panel": {
@@ -18,7 +18,7 @@
   "anchor_from": "top_left",
   "anchor_to": "top_left",
   "text_alignment": "left",
-  "font_type": "MinecraftTen",
+  "font_type": "smooth",
   "size": [ "100% - 5px ", "default" ],
   "max_size": [ "100% - 5px ", "15px" ],
   "color": "black"
@@ -27,8 +27,7 @@
   "playername_header_text@loli.profile_label": {
   "layer": 5,
   "font_scale_factor": 0.7,
-  "text": "Gamertag :",
-  "font_type": "smooth"
+  "text": "Gamertag :"
   },
  
   "playername@loli.profile_label": {
@@ -76,11 +75,11 @@
   },
 
   "gamertag_panel@neko_c.bg_3": {
-    "size": [ 80 , 27 ],
+    "size": [ 100 , 27 ],
     "offset": [ 5 , 5 ],
     "anchor_from": "top_left",
     "anchor_to": "top_left",
-    "alpha": 0.75,
+    "alpha": 1,
     "controls": [
       {
         "nametag_stackpanel": {
@@ -160,7 +159,7 @@
   "minecraft_version": {
     "type": "panel",
     "size": [ 100, 32 ],
-    "layer": 999,
+    "layer": 5,
     "alpha": 1,
     "anchor_from": "bottom_left",
     "anchor_to": "bottom_left",

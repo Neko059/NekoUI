@@ -190,8 +190,14 @@
     "ignored": "(not $is_pregame or $education_edition)",
     "controls": [
       {
-        "create_or_play_button@x_button.fx_create_new_button": {  // Di Ubah
-          "size": [ "100%", 35 ],
+        "create_or_play_button@common_buttons.light_text_button": {
+          "$border_visible": false,
+          "$button_type_panel": "x_button.create_new_button_panel",
+          "size": [ "100%" , 40 ],
+          "$default_text_color|default": [ 0.0, 0.0, 0.0 ],
+          "$hover_text_color|default": [ 1.0, 1.0, 1.0 ],
+          "$pressed_text_color|default": [ 1.0, 1.0, 1.0 ],
+          "$locked_text_color|default": [ 0.3, 0.3, 0.3 ],
           "$button_text": "menu.play",
           "default_focus_precedence": 1,
           "$pressed_button_name": "play_world_button",
@@ -204,14 +210,8 @@
         }
       },
       {
-        "play_on_realm_butto@x_button.fx_realms_button": {  // Di Ubah
-          "size": [ "100%", 30 ],
-
-          "$glyph_texture": "textures/ui-x/icon-new/realmsIcon",
-          "$glyph_color_texture": "textures/ui-x/icon-new/realmsIcon",
-          "$glyph_size": [ 15, 15 ],
-
-
+        "play_on_realm_button@settings_common.action_button": {
+          "size": [ "100%", 35 ],
           "ignored": "(not $is_pregame or $education_edition)",
           "$button_text_max_size": [ "100%", 25 ],
           "$button_text": "menu.playOnRealms",
@@ -225,10 +225,9 @@
             },
             {
               "requires": "$realms_plus_on",
-              "$default_button_texture": "textures/neko/borderless/realms/button_borderless_light",
-              "$hover_button_texture": "textures/neko/borderless/realms/button_borderless_lighthover",
-              "$pressed_button_texture": "textures/neko/borderless/realms/button_borderless_lightpressed",
-              "$locked_button_texture": "textures/neko/borderless/realms/button_borderless_lightpressednohover"
+              "$default_button_texture": "textures/ui/realmsContent",
+              "$hover_button_texture": "textures/ui/realmsContentHover",
+              "$pressed_button_texture": "textures/ui/realmsContentPressed"
             }
           ],
           "bindings": [
@@ -1022,7 +1021,7 @@
     "$toggle_view_binding_name": "button_curang_toggle",
     "$glyph_texture": "textures/neko/glyph_icon/cheats_color",
     "$glyph_color_texture": "textures/neko/glyph_icon/cheats",
-    "$glyph_size": [ 18, 18 ],
+    "$glyph_size": [ 15, 15 ],
     "$button_text": "createWorldScreen.cheatSettings",
     "$toggle_property_bag": {
       "#panel_title": "createWorldScreen.cheatSettings"
@@ -1202,7 +1201,7 @@
     "$toggle_view_binding_name": "button_opdunia_toggle",
     "$glyph_texture": "textures/neko/glyph_icon/cheats_color",
     "$glyph_color_texture": "textures/neko/glyph_icon/cheats",
-    "$glyph_size": [ 18, 18 ],
+    "$glyph_size": [ 15, 15 ],
     "$button_text": "Game Rule",
     "$toggle_property_bag": {
       "#panel_title": "Game Rule"

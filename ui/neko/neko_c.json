@@ -132,13 +132,13 @@
     "store_top_bar_filler": {
       "type": "image",
       "texture": "textures/ui/StoreTopBarFiller",
-      "size": [ "100%", 25 ]
+      "size": [ "100%", 27 ]
     },  
 
     "store_top_bar": {
       "type": "image",
-      "texture": "textures/neko/StoreTopBar",
-      "size": [ "100%", 25 ]
+      "texture": "textures/ui/StoreTopBar",
+      "size": [ "100%", 27 ]
     },
 
     "bg_2": {
@@ -240,18 +240,20 @@
         "anchor_to": "center",
         "size": [ "100%" , "100%" ],
         "controls": [
-            { "version@neko_c.about_label_title": { "text": "v7.6.0 Beta" , "font_size": "extra_large"}},
+            { "version@neko_c.about_label_title": { "text": "v7.6.1" , "font_size": "extra_large"}},
             { "panel": { "type": "panel", "size": [ 2 , 2 ] }},
             { "version@neko_c.about_label": { "text": "NekoUI Created by Farhan"}},
             { "panel": { "type": "panel", "size": [ 2 , 2 ] }},
             { "version@neko_c.about_label": { "text": "Panorama dari : @FoxyCodeX"}},
             { "panel": { "type": "panel", "size": [ 2 , 2 ] }},
-            { "version@neko_c.about_label": { "text": "Latest Update : 14 May 2022"}},
+            { "version@neko_c.about_label": { "text": "Latest Update : 15 May 2022"}},
             { "panel": { "type": "panel", "size": [ 2 , 2 ] }},
-            { "version@neko_c.about_label": { "text": "UUID : 14 May 2022"}}
+            { "version@neko_c.about_label": { "text": "UUID : 14 May 2022"}},
+            { "panel": { "type": "panel", "size": [ 2 , 2 ] }},
+            { "version@neko_c.about_label": { "text": "Website : §b nekoproj.herokuapp.com"}}
         ]
     },
 
     "created_by_title@neko_c.fxn_label": { "font_scale_factor": 0.7, "text": "UI Created By:"},
-    "created_by@neko_c.fxn_label": { "font_size": "large", "text": "§bFarhan & zxyn"}
+    "created_by@neko_c.fxn_label": { "font_size": "large", "text": "§bFarhan & Zal Byte"}
 }

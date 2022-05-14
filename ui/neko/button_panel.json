@@ -60,7 +60,6 @@
 
   "main_screen_button": {
     "type": "panel",
-    "$glyph_offset": [ 4 , 0 ],
     "$glyph_anchor_from": "left_middle",
     "$glyph_anchor_to": "left_middle",
     "$button_label_offset": [ 27 , -0.1 ],
@@ -79,10 +78,12 @@
           "variables": [
             {
               "requires": "$default_state",
+              "$glyph_offset": [ 4 , 0 ],
               "$warna_icon": "$warna_icon_default"
             },
             {
               "requires": "$hover_state",
+              "$glyph_offset": [ 4 , 2 ],
               "$warna_icon": "$warna_icon_saatdihover"
             }
           ],
